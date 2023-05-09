@@ -9,8 +9,8 @@
 locale                   : "en-US"
 title                    : "Do Tri Nhan"
 title_separator          : "-"
-name                     : &name "Your Name"
-description              : &description "personal description"
+name                     : &name "Do Tri Nhan"
+description              : &description "AI Engineer in Speech and Signal Processing"
 url                      : https://dotrinhan.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : "dotrinhan.github.io"
@@ -80,7 +80,7 @@ analytics:
 
 # Site Author
 author:
-  name             : "Your Sidebar Name"
+  name             : "Do Tri Nhan"
   avatar           : "profile.png"
   bio              : "Your biography for the left-hand sidebar"
   location         : "Location"
