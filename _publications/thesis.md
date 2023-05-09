@@ -1,7 +1,7 @@
 ---
-title: "Paper Title Number 1"
+title: "DeepSpeechVC: Voice Cloning Framework with Speech Synthesis and Voice Conversion - Experiment with Speech2Speech techniques to make voice conversion from a small sample of the target speakers"
 collection: publications
-permalink: /publication/2009-10-01-paper-title-number-1
+permalink: /publication/thesis
 excerpt: 'This paper is about the number 1. The number 2 is left for future work.'
 date: 2009-10-01
 venue: 'Journal 1'
