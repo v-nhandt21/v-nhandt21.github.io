@@ -1,6 +1,6 @@
 ---
 title: "Music Voice Conversion - 1st The Sound of AI Hackathon 2022"
-excerpt: "Speech Translation for Low Resource Language with Voice I/O and Preserve the Characteristics of the Voice Input <br/><img src='/images/slt.png'>"
+excerpt: "Sing any song without speaking the language <br/><img src='/images/soundai.png'>"
 collection: portfolio
 ---
 
