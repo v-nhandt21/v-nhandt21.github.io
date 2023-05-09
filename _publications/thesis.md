@@ -17,7 +17,7 @@ Speech processing is an important research area in the field of artificial intel
 
 The new proposed voice conversion model helps to create the foundation for the study of Vietnamese voice cloning, the phoneme conversion and text standardization libraries are provided, these libraries can run on cross-platform (C++, Python, Android NDK) and have been practically applied in industrial products.
 
-<embed src="files/Thesis.pdf" width="1000" height="100%" type='application/pdf'>
+<!-- <embed src="files/Thesis.pdf" width="1000" height="100%" type='application/pdf'>
 
 <object data="files/Thesis.pdf" type="application/pdf" width="1000px" height="100%">
     <embed src="files/Thesis.pdf">
@@ -25,6 +25,16 @@ The new proposed voice conversion model helps to create the foundation for the s
     </embed>
 </object>
 
-<iframe src="files/Thesis.pdf" width="100%" height="600px"></iframe>
+<iframe src="files/Thesis.pdf" width="100%" height="600px"></iframe> -->
 
-<iframe src="https://github.com/v-nhandt21/v-nhandt21.github.io/blob/master/files/Thesis.pdf" width="100%" height="600px"></iframe>
+<!-- <iframe src="https://github.com/v-nhandt21/v-nhandt21.github.io/blob/master/files/Thesis.pdf" width="100%" height="600px"></iframe> -->
+
+<object data="/files/Thesis.pdf" type="application/pdf">
+    <p>
+        Your browser does not support embedded PDF files.<br>
+        <a href="/files/Thesis.pdf">Click here to
+        download the PDF file.</a>
+    </p>
+</object>
+
+<img src='/images/viphoneme.png'>
