@@ -26,3 +26,5 @@ The new proposed voice conversion model helps to create the foundation for the s
 </object>
 
 <iframe src="files/Thesis.pdf" width="100%" height="600px"></iframe>
+
+<iframe src="https://github.com/v-nhandt21/v-nhandt21.github.io/blob/master/files/Thesis.pdf" width="100%" height="600px"></iframe>
