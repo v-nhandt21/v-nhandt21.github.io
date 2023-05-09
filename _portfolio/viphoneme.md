@@ -1,6 +1,6 @@
 ---
 title: "Viphoneme"
-excerpt: "Project Custom from vPhon for convert Raw text to IPA using in Speech Synthesis <br/><img src='/images/viphoneme.png'>"
+excerpt: "ypi Package Viphoneme: Phonetization, Convert Vietnamese Grapheme to IPA <br/><img src='/images/viphoneme.png'>"
 collection: portfolio
 ---
 
