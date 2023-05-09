@@ -15,3 +15,10 @@ Speech processing is an important research area in the field of artificial intel
 
 The new proposed voice conversion model helps to create the foundation for the study of Vietnamese voice cloning, the phoneme conversion and text standardization libraries are provided, these libraries can run on cross-platform (C++, Python, Android NDK) and have been practically applied in industrial products.
 
+<embed src="https://github.com/v-nhandt21/v-nhandt21.github.io/tree/master/files/Thesis.pdf" width="1000" height="100%" type='application/pdf'>
+
+<object data="https://github.com/v-nhandt21/v-nhandt21.github.io/tree/master/files/Thesis.pdf" type="application/pdf" width="1000px" height="100%">
+    <embed src="https://github.com/v-nhandt21/v-nhandt21.github.io/tree/master/files/Thesis.pdf">
+        <p>This browser does not support PDFs. Please download the PDF to view it: <a href="http://yoursite.com/the.pdf">Download PDF</a>.</p>
+    </embed>
+</object>
