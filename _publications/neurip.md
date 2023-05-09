@@ -6,7 +6,7 @@ excerpt: 'This paper presents a novel Vietnamese speech-based question answering
 date: 2022-01-01
 venue: 'Intelligent User Interfaces Conference'
 paperurl: ''
-citation: 'Tin Duy Vo, Manh Tien Luong, Duong Minh Le, Hieu Minh Tran, Nhan Tri Do, Tuan-Duy Hien Nguyen, Hung Hai Bui, Dat Quoc Nguyen, Dinh Quoc Phung'
+citation: 'Tin Duy Vo, Manh Tien Luong, Duong Minh Le, Hieu Minh Tran, <b>Nhan Tri Do</b>, Tuan-Duy Hien Nguyen, Hung Hai Bui, Dat Quoc Nguyen, Dinh Quoc Phung'
 ---
 
 [Download Paper](https://dl.acm.org/doi/abs/10.1145/3490100.3516525)

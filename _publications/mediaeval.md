@@ -7,7 +7,7 @@ excerpt: 'MediaEval 2020 provided a subset of the MTG-Jamendo dataset, aimed to 
 date: 2020-01-01
 venue: 'MediaEval’20'
 paperurl: ''
-citation: 'Tri-Nhan Do, Minh-Tri Nguyen, Hai-Dang Nguyen, Minh-Triet Tran, Xuan-Nam Cao'
+citation: '<b>Tri-Nhan Do</b>, Minh-Tri Nguyen, Hai-Dang Nguyen, Minh-Triet Tran, Xuan-Nam Cao'
 ---
 
 [Download Paper](https://ceur-ws.org/Vol-2882/paper49.pdf)

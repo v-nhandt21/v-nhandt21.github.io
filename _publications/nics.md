@@ -6,7 +6,7 @@ excerpt: 'Speech synthesis systems are now getting smarter and more natural than
 date: 2020-01-01
 venue: '7th NAFOSTED Conference on Information and Computer Science (NICS)'
 paperurl: ''
-citation: 'Do Tri Nhan, Nguyen Minh Tri, Cao Xuan Nam'
+citation: '<b>Do Tri Nhan</b>, Nguyen Minh Tri, Cao Xuan Nam'
 ---
 
 [Download Paper](https://ieeexplore.ieee.org/document/9335905)

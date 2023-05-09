@@ -6,7 +6,7 @@ excerpt: 'The Non-autoregressive text to speech models such as Fastspeech2 can f
 date: 2023-01-01
 venue: 'Journal'
 paperurl: ''
-citation: 'Van Thinh Nguyen, Tri-Nhan Do, Hung-Cuong Pham, Tuan Vu Ho, Ngoc-Minh-Khanh Nguyen, Dang-Khoa Mac'
+citation: 'Van Thinh Nguyen, <b>Tri-Nhan Do</b>, Hung-Cuong Pham, Tuan Vu Ho, Ngoc-Minh-Khanh Nguyen, Dang-Khoa Mac'
 ---
 
 [Download Paper](https://v-nhandt21.github.io/FastspeechStyle/)
