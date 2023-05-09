@@ -1,6 +1,6 @@
 ---
 title: "Viphoneme"
-excerpt: "ypi Package Viphoneme: Phonetization, Convert Vietnamese Grapheme to IPA <br/><img src='/images/viphoneme.png'>"
+excerpt: "Pypi Package Viphoneme: Phonetization, Convert Vietnamese Grapheme to IPA <br/><img src='/images/viphoneme.png'>"
 collection: portfolio
 ---
 
