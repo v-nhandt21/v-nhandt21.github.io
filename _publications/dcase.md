@@ -1,9 +1,9 @@
 ---
 title: "DCASE"
 collection: publications
-permalink: /publication/thesis
+permalink: /publication/dcase
 excerpt: 'This work in the intership at Nanyang Technological University'
-date: 2023-01-01
+date: 1999-01-01
 venue: ''
 paperurl: ''
 citation: ''
