@@ -1,6 +1,6 @@
 ---
 title: "Viphoneme"
-excerpt: "Short description of portfolio item number 2 <br/><img src='/images/viphoneme.png'>"
+excerpt: "Project Custom from vPhon for convert Raw text to IPA using in Speech Synthesis <br/><img src='/images/viphoneme.png'>"
 collection: portfolio
 ---
 

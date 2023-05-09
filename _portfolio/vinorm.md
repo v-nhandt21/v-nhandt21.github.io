@@ -1,6 +1,6 @@
 ---
 title: "Vinorm"
-excerpt: "Short description of portfolio item number 2 <br/><img src='/images/vinorm.png'>"
+excerpt: "Python - NSW package for Vietnamese: Normalization system to convert numbers, abbreviations, and words that cannot be pronounced into syllables <br/><img src='/images/vinorm.png'>"
 collection: portfolio
 ---
 
