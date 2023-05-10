@@ -1,4 +1,4 @@
----
+<!-- ---
 title: "DCASE"
 collection: publications
 permalink: /publication/dcase
@@ -9,4 +9,4 @@ paperurl: ''
 citation: ''
 ---
 
-Update soon
+Update soon -->
