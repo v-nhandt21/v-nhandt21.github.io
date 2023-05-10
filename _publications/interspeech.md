@@ -2,7 +2,7 @@
 title: "Interspeech"
 collection: publications
 permalink: /publication/interspeech
-excerpt: ''
+excerpt: 'Upcoming'
 date: 1999-01-01
 venue: 'Conference'
 paperurl: ''
