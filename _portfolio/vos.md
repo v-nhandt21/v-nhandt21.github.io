@@ -6,7 +6,7 @@ collection: portfolio
 
 [Github Repo](https://github.com/v-nhandt21/NICS_Appendix) 
 
-<iframe src="/files/VOS_Update_Base.pdf.pdf" width="100%" height="2000"></iframe>
+<iframe src="/files/VOS_Update_Base.pdf" width="100%" height="2000"></iframe>
 
 <iframe src="/files/Voice_of_Southern_Frontend_Report.pdf" width="100%" height="2000"></iframe>
 

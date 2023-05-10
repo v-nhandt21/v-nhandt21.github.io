@@ -1,5 +1,5 @@
 ---
-title: "Lyric_based_approach_for_music_emotion_recognition_using_hierarchical_attention_networks (NLP)"
+title: "Lyric based approach for music emotion recognition using hierarchical attention networks (NLP)"
 excerpt: "We utilize the natural structure of a song which is words combine to lines, lines combine to segments, and segments combine to a complete song by adapting a hierarchical attention networks (HAN). .<br/><img src='/images/music.png'>"
 collection: portfolio
 ---

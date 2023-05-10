@@ -4,11 +4,11 @@ excerpt: "Speech Translation for Low Resource Language with Voice I/O and Preser
 collection: portfolio
 ---
 
-Hackathon Page: https://slt2022.org/hackathon.php 
+[Hackathon Page](https://slt2022.org/hackathon.php)
 
-Our presentation: https://www.youtube.com/watch?v=Ep_zdgDX3E8
+[Our presentation](https://www.youtube.com/watch?v=Ep_zdgDX3E8)
 
-Github Repo: https://github.com/v-nhandt21/Voice-Preserving-Speech-Machine-Translation
+[Github Repo](https://github.com/v-nhandt21/Voice-Preserving-Speech-Machine-Translation)
 
 <img src='/images/slt_Certificate.png'>
 
