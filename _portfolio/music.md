@@ -4,8 +4,6 @@ excerpt: "We utilize the natural structure of a song which is words combine to l
 collection: portfolio
 ---
 
-[Github Repo](https://github.com/v-nhandt21/NICS_Appendix) 
-
 <iframe src="/files/music.pdf" width="100%" height="2000"></iframe>
 
 <iframe src="/files/Lyric_based_approach_for_music_emotion_recognition_using_hierarchical_attention_networks.pdf" width="100%" height="2000"></iframe>
