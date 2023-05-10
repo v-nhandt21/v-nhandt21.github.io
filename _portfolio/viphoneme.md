@@ -2,6 +2,7 @@
 title: "Viphoneme"
 excerpt: "Pypi Package Viphoneme: Phonetization, Convert Vietnamese Grapheme to IPA <br/><img src='/images/viphoneme.png'>"
 collection: portfolio
+date: 2023-01-01
 ---
 
 # Project Custom from vPhon for convert Raw text to IPA
