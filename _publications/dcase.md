@@ -6,7 +6,7 @@ excerpt: 'This paper presents our approach to Task 4b of the Detection and Class
 date: 2023-01-01
 venue: 'Detection and Classification of Acoustic Scenes and Events 2023'
 paperurl: ''
-citation: 
+citation: '<b>Nhan Tri-Do1</b>, Param Biyani, Zhang Yuxuan, Andrew Koh Jin Jie, Chng Eng Siong'
 ---
 
 [Github Repo](https://github.com/v-nhandt21/SED_SoftLabel)
