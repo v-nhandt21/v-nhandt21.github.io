@@ -20,7 +20,7 @@ Sleep stage classification refers to the process of categorizing different stage
 
 Traditionally, sleep stage classification has been performed using polysomnography (PSG), which involves recording various physiological signals during sleep, including electroencephalography (EEG), electrooculography (EOG), electromyography (EMG), and other measurements. These signals provide information about brain wave patterns, eye movements, and muscle activity, which can be used to differentiate different stages of sleep.
 
-<img src='/images/Sleep/Untitled_201.png'>
+<img src='/images/Sleep/Untitled_1.png'>
 
 The standard sleep staging system typically includes the following stages:
 
@@ -31,7 +31,7 @@ a. Stage N1: This is the transition stage between wakefulness and sleep. It is a
 b. Stage N2: This stage represents the majority of the sleep cycle and is characterized by the presence of sleep spindles (bursts of brain wave activity) and K-complexes (sharp waveforms).
 c. Stage N3 (also known as slow-wave sleep or deep sleep): This is the deepest sleep stage, featuring slow brain waves known as delta waves. It is associated with physical restoration, hormone regulation, and memory consolidation.
 
-<img src='/images/Sleep/Untitled_202.png'>
+<img src='/images/Sleep/Untitled_2.png'>
 
 Sleep stage classification algorithms utilize machine learning techniques, such as artificial neural networks, support vector machines, or hidden Markov models, to analyze the recorded signals and classify them into the different sleep stages. These algorithms are trained on large datasets of manually scored sleep recordings to learn the patterns associated with each sleep stage.
 
@@ -39,13 +39,13 @@ Accurate sleep stage classification is crucial for sleep research, clinical slee
 
 Application and Motivation: [https://www.youtube.com/watch?v=0MgzXevxHRw](https://www.youtube.com/watch?v=0MgzXevxHRw)
 
-<img src='/images/Sleep/Untitled_203.png'>
+<img src='/images/Sleep/Untitled_3.png'>
 
 ---
 
 ## ****An Attention-Based Deep Learning Approach for Sleep Stage Classification With Single-Channel EEG****
 
-<img src='/images/Sleep/Untitled_204.png'>
+<img src='/images/Sleep/Untitled_4.png'>
 
 The paper proposes a new deep-learning architecture called AttnSleep for automatic sleep stage classification using single-channel EEG signals. Sleep stage classification is important for measuring sleep quality.
 
@@ -59,7 +59,7 @@ The researchers have made their source codes, experimental data, and supplementa
 
 ## **Data Preparation and Pre-processing:**
 
-<img src='/images/Sleep/Untitled_205.png'>
+<img src='/images/Sleep/Untitled_5.png'>
 
 - **Sleep EDF 20:**
     - Run this bash to download:
@@ -88,11 +88,11 @@ The researchers have made their source codes, experimental data, and supplementa
     
     - Request DATA:
     
-    <img src='/images/Sleep/Untitled_206.png'>
+    <img src='/images/Sleep/Untitled_6.png'>
     
     - Install Ruby ← to solve package dependency of Ruby and Ruby version manager (rvm)
     
-    <img src='/images/Sleep/Untitled_207.png'>
+    <img src='/images/Sleep/Untitled_7.png'>
     
     - Install Gem in Ruby:
     
@@ -100,7 +100,7 @@ The researchers have made their source codes, experimental data, and supplementa
     
     - [https://sleepdata.org/datasets/shhs](https://sleepdata.org/datasets/shhs)
     
-    <img src='/images/Sleep/Untitled_208.png'>
+    <img src='/images/Sleep/Untitled_8.png'>
     
     - Download Data:
     
@@ -124,15 +124,15 @@ Another Way: Download Preprocess DATA Directly From: [https://researchdata.ntu.e
 
 Viewer EDF: [https://bilalzonjy.github.io/EDFViewer/EDFViewer.html](https://bilalzonjy.github.io/EDFViewer/EDFViewer.html)
 
-<img src='/images/Sleep/Untitled_209.png'>
+<img src='/images/Sleep/Untitled_9.png'>
 
-<img src='/images/Sleep/Untitled_2010.png'>
+<img src='/images/Sleep/Untitled_10.png'>
 
-<img src='/images/Sleep/Untitled_2011.png'>
+<img src='/images/Sleep/Untitled_11.png'>
 
 Sleep Stage W
 
-<img src='/images/Sleep/Untitled_2012.png'>
+<img src='/images/Sleep/Untitled_12.png'>
 
 Sleep Stage 1
 
@@ -158,11 +158,11 @@ python -m pip install mne=='0.20.7'
 
 ## Re**produce**
 
-<img src='/images/Sleep/Untitled_2013.png'>
+<img src='/images/Sleep/Untitled_13.png'>
 
 Target:
 
-<img src='/images/Sleep/Untitled_2014.png'>
+<img src='/images/Sleep/Untitled_14.png'>
 
 [https://github.com/emadeldeen24/AttnSleep](https://github.com/emadeldeen24/AttnSleep)
 
@@ -192,29 +192,29 @@ Proposed Method:
 
 **Ex1: Reproduce**
 
-<img src='/images/Sleep//Untitled_2015.png'>
+<img src='/images/Sleep//Untitled_15.png'>
 
 Result for Sleep-EDF-20
 
 **Ex2: Transformer → Conformer**
 
-<img src='/images/Sleep/Untitled_2016.png'>
+<img src='/images/Sleep/Untitled_16.png'>
 
 **Ex3: Multiscale + Multiperiod CRNN**
 
-<img src='/images/Sleep/Untitled_2017.png'>
+<img src='/images/Sleep/Untitled_17.png'>
 
-<img src='/images/Sleep/Untitled_2018.png'>
+<img src='/images/Sleep/Untitled_18.png'>
 
-<img src='/images/Sleep/Untitled_2019.png'>
+<img src='/images/Sleep/Untitled_19.png'>
 
-<img src='/images/Sleep/Untitled_2020.png'>
+<img src='/images/Sleep/Untitled_20.png'>
 
-<img src='/images/Sleep/Untitled_2021.png'>
+<img src='/images/Sleep/Untitled_21.png'>
 
 ## Negative Analysis
 
-<img src='/images/Sleep/Untitled_2022.png'>
+<img src='/images/Sleep/Untitled_22.png'>
 
 Prediction and Ground truth for sleep stage of an record
 
