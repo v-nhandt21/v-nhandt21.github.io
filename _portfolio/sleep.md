@@ -1,6 +1,6 @@
 ---
 title: "Sleep Stage Classification with Multi-Scale Multi-Period CNN"
-excerpt: "Speech Translation for Low Resource Language with Voice I/O and Preserve the Characteristics of the Voice Input <br/><img src='/images/slt.png'>"
+excerpt: "Sleep stage classification refers to the process of categorizing different stages of sleep based on the patterns and characteristics of brain activity.<br/><img src='/images/Sleep/Untitled_1.png'>"
 collection: portfolio
 ---
 
@@ -16,7 +16,6 @@ Target: ← Reproduce:
 
 Sleep stage classification refers to the process of categorizing different stages of sleep based on the patterns and characteristics of brain activity, eye movements, muscle tone, and other physiological parameters. Sleep is not a uniform state but rather consists of distinct stages that repeat cyclically throughout the night.
 
-<img src='/images/ethic.png'>
 <img src='/images/Sleep/Untitled.png'>
 
 Traditionally, sleep stage classification has been performed using polysomnography (PSG), which involves recording various physiological signals during sleep, including electroencephalography (EEG), electrooculography (EOG), electromyography (EMG), and other measurements. These signals provide information about brain wave patterns, eye movements, and muscle activity, which can be used to differentiate different stages of sleep.
