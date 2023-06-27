@@ -1,6 +1,6 @@
 ---
 title: "Sleep Stage Classification with Multi-Scale Multi-Period CNN"
-excerpt: "Sleep stage classification refers to the process of categorizing different stages of sleep based on the patterns and characteristics of brain activity.<br/><img src='/images/Sleep/Untitled_1.png'>"
+excerpt: "Sleep stage classification refers to the process of categorizing different stages of sleep based on the patterns and characteristics of brain activity.<br/><img src='/images/Sleep/sleep.png'>"
 collection: portfolio
 ---
 
