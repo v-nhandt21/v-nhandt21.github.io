@@ -41,4 +41,4 @@ python setup.py sdist bdist_wheel
 twine upload dist/*
 ```
 
-<img src='/images/vinorm_stat.png'>
+<img src='http://v-nhandt21.github.io/images/vinorm_stat.png'>
