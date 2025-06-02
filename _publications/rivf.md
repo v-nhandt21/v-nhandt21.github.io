@@ -9,6 +9,6 @@ paperurl: ''
 citation: '<b>Nhan Tri Do</b>, Loi Nguyen Hoang, Phuong Ta Viet, Kien Phan Trung'
 ---
 
-<iframe src="files/Enhancing_Deepfake_Detection__A_Study_Using_WavLM_and_Advanced_RawBoost_Augmentation_Techniques.pdf" width="100%" height="4000"></iframe>
+<iframe src="/files/Enhancing_Deepfake_Detection__A_Study_Using_WavLM_and_Advanced_RawBoost_Augmentation_Techniques.pdf" width="100%" height="4000"></iframe>
 
-<iframe src="files/rivf_slide.pdf" width="100%" height="4000"></iframe>
+<iframe src="/files/rivf_slide.pdf" width="100%" height="4000"></iframe>

@@ -6,4 +6,4 @@ collection: portfolio
 
 <!-- <img src="http://v-nhandt21.github.io/images/vlsp_poster.png" alt="Example Image" width="1000" height="100%"> -->
 
-<iframe src="files/Voice_Attacker_Leveraging_Multi_Head_Factorized_Attentive_WavLM_Reconstructor_and_Gradient_Reversal_for_Random_Prosody_Anonymization.pdf" width="100%" height="6000"></iframe>
+<iframe src="/files/Voice_Attacker_Leveraging_Multi_Head_Factorized_Attentive_WavLM_Reconstructor_and_Gradient_Reversal_for_Random_Prosody_Anonymization.pdf" width="100%" height="6000"></iframe>
