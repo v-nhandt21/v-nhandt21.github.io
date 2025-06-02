@@ -40,3 +40,5 @@ For C++ version: https://github.com/NoahDrisort/vinorm_cpp_version
 python setup.py sdist bdist_wheel
 twine upload dist/*
 ```
+
+<img src='/images/vinorm_stat.png'>
