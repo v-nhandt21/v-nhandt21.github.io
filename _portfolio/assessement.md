@@ -4,7 +4,7 @@ excerpt: "This project is customized to use the latest ASR model Whisper-large, 
 collection: portfolio
 ---
 
-# Voice Pronunciation Assessment
+<!-- # Voice Pronunciation Assessment
 This project is based on [ai-pronunciation-trainer](https://github.com/Thiagohgl/ai-pronunciation-trainer), customized to use the latest ASR model Whisper-large, with additional implementation of a React UI and several other signal processing tweaks.
 
 ![](/images/assessment.png)
@@ -24,4 +24,4 @@ python webApp.py
 cd assessment_ui
 nvm use 18
 npm start
-```
+``` -->
