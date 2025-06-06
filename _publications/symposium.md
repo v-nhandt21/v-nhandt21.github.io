@@ -1,20 +1,13 @@
 ---
-title: "2HCMUS at MediaEval 2020: Emotion Classification Using Wavenet Features with SpecAugment and EfficientNet"
+title: "Voice Attacker Leveraging Multi-Head Factorized Attentive Reconstructor and Gradient Reversal for Random Prosody Anonymization"
 collection: publications
-permalink: /publication/mediaeval2
-excerpt: 'MediaEval 2020 provided a subset of the MTG-Jamendo dataset, aimed to recognize mood and theme in music. Team HCMUS proposes several solutions to build efficient classifiers to solve this problem. In addition to the mel-spectrogram features, new features extracted from the wavenet model is extracted and utilized to train the EfficientNet model. As evaluated by the jury, our best result achieved of 0.142 in PR-AUC and 0.76 in the ROC-AUC measurement. With fast training and lightweight features, our proposed methods are potential to work well with deeper neural networks.'
-date: 2022-01-01
-venue: 'MediaEval’22'
+permalink: /publication/symposium
+excerpt: 'This is the report for Team 04-SpeechWorld in the First VoicePrivacy Attacker Challenge. The attack methods aimed to verify speakers anonymized by two main anonymization systems: STTTS-based and NAC-based. The characteristics of the original audio were reconstructed using speaker embeddings from WavLM-Ecapa and codecs for the NAC system. Additionally, gradient reversal layers were incorporated to eliminate dependencies on prosody features that were randomly simulated by the anonymization models. The results show that the proposed attackers achieved a relative improvement of 26.49\% in Equal Error Rate (EER) compared to the baseline, reducing it from 43.22\% to 31.77\% for the T12-5 attacker system.'
+date: 2025-01-01
+venue: 'Paper'
 paperurl: ''
-citation: '<b>Tri-Nhan Do</b>, Minh-Tri Nguyen, Hai-Dang Nguyen, Minh-Triet Tran, Xuan-Nam Cao'
+citation: '<b>Nhan Tri Do</b>'
 ---
+<!-- <img src='/images/voiceprivacy.png'> -->
 
-[Download Paper](https://ceur-ws.org/Vol-2882/paper49.pdf)
-
-[Github Repo](https://github.com/v-nhandt21/MediaEval2020)
-
-<p style='text-align: justify;'>MediaEval 2020 provided a subset of the MTG-Jamendo dataset, aimed to recognize mood and theme in music. Team HCMUS proposes several solutions to build efficient classifiers to solve this problem. In addition to the mel-spectrogram features, new features extracted from the wavenet model is extracted and utilized to train the EfficientNet model. As evaluated by the jury, our best result achieved of 0.142 in PR-AUC and 0.76 in the ROC-AUC measurement. With fast training and lightweight features, our proposed methods are potential to work well with deeper neural networks.</p>
-
-<iframe src="/files/mediaeval_slide.pdf" width="100%" height="2000"></iframe>
-
-<iframe src="/files/mediaeval.pdf" width="100%" height="2000"></iframe>
+<iframe src="/files/Voice_Attacker_Leveraging_Multi_Head_Factorized_Attentive_WavLM_Reconstructor_and_Gradient_Reversal_for_Random_Prosody_Anonymization.pdf" width="100%" height="6000"></iframe>
