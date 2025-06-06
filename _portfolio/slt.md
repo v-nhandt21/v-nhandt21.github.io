@@ -2,6 +2,7 @@
 title: "Voice-Preserving Speech Machine Translation - STL Hackathon (Quatar 2022)"
 excerpt: "Speech Translation for Low Resource Language with Voice I/O and Preserve the Characteristics of the Voice Input <br/><img src='/images/slt.png'>"
 collection: portfolio
+date: 2021-01-01
 ---
 
 [Hackathon Page](https://slt2022.org/hackathon.php)
