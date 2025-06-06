@@ -1,13 +1,14 @@
 ---
-title: "Voice Attacker Leveraging Multi-Head Factorized Attentive Reconstructor and Gradient Reversal for Random Prosody Anonymization"
+title: "Enhancing Deepfake Detection: A Study Using WavLM and Advanced RawBoost Augmentation Techniques"
 collection: publications
-permalink: /publication/symposium
-excerpt: 'This is the report for Team 04-SpeechWorld in the First VoicePrivacy Attacker Challenge. The attack methods aimed to verify speakers anonymized by two main anonymization systems: STTTS-based and NAC-based. The characteristics of the original audio were reconstructed using speaker embeddings from WavLM-Ecapa and codecs for the NAC system. Additionally, gradient reversal layers were incorporated to eliminate dependencies on prosody features that were randomly simulated by the anonymization models. The results show that the proposed attackers achieved a relative improvement of 26.49\% in Equal Error Rate (EER) compared to the baseline, reducing it from 43.22\% to 31.77\% for the T12-5 attacker system.'
-date: 2024-01-01
+permalink: /publication/rivfs
+excerpt: 'Automatic Speaker Verification (ASV) systems are increas- ingly vulnerable to sophisticated spoofing attacks, particularly those involving deepfake audio. This paper presents our ap- proach to the challenges in Task 1 of the ASVSpoof 2024 com- petition, focusing on deepfake detection to classify utterances is spoof or bonafide. To enhance model robustness, we employed self-supervised learning (SSL) models, specifically fine-tuning WavLM for feature extraction due to its superior performance in noisy environments. We utilized RawBoost augmentation techniques to simulate real-world audio distortions. Experimen- tal results demonstrate that our approach significantly improves detection accuracy, achieving an EER of 2.85% with WavLM and further reducing to 2.69% with a fusion of WavLM and Wav2Vec2 models.'
+date: 2025-01-01
 venue: 'Paper'
 paperurl: ''
-citation: '<b>Nhan Tri Do</b>
+citation: '<b>Nhan Tri Do</b>, Loi Nguyen Hoang, Phuong Ta Viet, Kien Phan Trung'
 ---
-<!-- <img src='/images/voiceprivacy.png'> -->
 
-<iframe src="/files/Voice_Attacker_Leveraging_Multi_Head_Factorized_Attentive_WavLM_Reconstructor_and_Gradient_Reversal_for_Random_Prosody_Anonymization.pdf" width="100%" height="6000"></iframe>
+<iframe src="/files/Enhancing_Deepfake_Detection__A_Study_Using_WavLM_and_Advanced_RawBoost_Augmentation_Techniques.pdf" width="100%" height="4000"></iframe>
+
+<iframe src="/files/rivf_slide.pdf" width="100%" height="4000"></iframe>
