@@ -4,6 +4,8 @@ excerpt: "This project is customized to use the latest ASR model Whisper-large, 
 collection: portfolio
 ---
 
+<iframe src="/files/cuda_slide.pdf" width="100%" height="2000"></iframe>
+
 <!-- # Voice Pronunciation Assessment
 This project is based on [ai-pronunciation-trainer](https://github.com/Thiagohgl/ai-pronunciation-trainer), customized to use the latest ASR model Whisper-large, with additional implementation of a React UI and several other signal processing tweaks.
 
