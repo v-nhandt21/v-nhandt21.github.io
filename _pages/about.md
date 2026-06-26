@@ -8,7 +8,9 @@ redirect_from:
   - /about.html
 ---
 
-I am **Do Tri Nhan**, an AI Engineer specializing in **Speech and Signal Processing**, currently working as **AI Team Lead for Speech Generation** at [VinSmart Future – Vingroup JSC](https://vinsmart.net), Ho Chi Minh City, Vietnam.
+I am **Do Tri Nhan**, an AI Engineer specializing in **Speech and Signal Processing**, currently working as **AI Team Lead for Speech Generation** at [Vinfast JSC](https://vinfast.com), Ho Chi Minh City, Vietnam.
+
+<a href="/files/CV_short.pdf" class="btn btn--info" target="_blank">Download CV (Short)</a>
 
 ## Research Interests
 
@@ -24,7 +26,7 @@ My work spans the full speech AI stack — from core research to production depl
 
 I completed my **Bachelor of Science in Computer Science (Advanced Program, APCS K17)** at VNUHCM – University of Science in 2021, graduating with a GPA of 3.83/4.0.
 
-During my undergraduate years, I was a Research Assistant at the **AI Lab** and **Robotics & IoT Lab** at USSH, where I built a 10 GB Vietnamese speech corpus and researched text normalization and phonology. I later interned remotely at the **Speech and Language Lab, Nanyang Technological University (NTU)**, working on sound event detection in urban environments (project with ST Engineering).
+During my undergraduate years, I was a Research Assistant at the **AI Lab** and **Robotics & IoT Lab** at USSH, where I built a 19 GB Vietnamese speech corpus and researched text normalization and phonology. I later interned remotely at the **Speech and Language Lab, Nanyang Technological University (NTU)**, working on sound event detection in urban environments (project with ST Engineering).
 
 ## Open-Source Contributions
 

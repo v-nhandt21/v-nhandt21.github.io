@@ -9,7 +9,7 @@ redirect_from:
 
 {% include base_path %}
 
-<a href="/files/CV.pdf" class="btn btn--info" target="_blank">Download PDF</a>
+<a href="/files/CV_long.pdf" class="btn btn--info" target="_blank">Download Full CV (PDF)</a> &nbsp; <a href="/files/CV_short.pdf" class="btn btn--default" target="_blank">Download Short CV (PDF)</a>
 
 ---
 
@@ -35,9 +35,17 @@ Bachelor of Science, Advanced Program in Computer Science (APCS K17), Ho Chi Min
 
 ## Experience
 
+**Vinfast JSC** &nbsp;|&nbsp; Ho Chi Minh City, Vietnam
+
+*AI Team Lead – Speech Generation* &nbsp;|&nbsp; Jun 2026 – Present
+- **Unified TTS Serving Gateway:** Architected a production FastAPI gateway consolidating multiple TTS model tiers and normalization backends — supporting streaming, async job queue, API key auth with per-key usage tracking, and horizontal shard deployment for multilingual production serving.
+- **TTS Normalization Automation Harness:** Designed an end-to-end QC automation framework with LLM-based error classification, BA-configurable per-project switch-code vocabulary management, automated Java SDK and prompt rebuild, and full regression evaluation — reducing engineering intervention for vocabulary updates to zero.
+
+---
+
 **VinSmart Future – Vingroup JSC** &nbsp;|&nbsp; Ho Chi Minh City, Vietnam
 
-*AI Team Lead – Speech Generation* &nbsp;|&nbsp; Feb 2026 – Present
+*AI Team Lead – Speech Generation* &nbsp;|&nbsp; Feb 2026 – Jun 2026
 - **Research Team Leadership:** Lead a team of 6 members on speech generation: voice design, non-verbal audio, and reinforcement learning for speech synthesis.
 - **Voice Model Product Management:** Coordinate between research team and product projects; standardize QA and release processes for voice models across three product lines: robot assistants, in-vehicle AI, and super-app voice mode.
 
@@ -61,6 +69,9 @@ Bachelor of Science, Advanced Program in Computer Science (APCS K17), Ho Chi Min
 - **Government Voice Biometric Project:** Implemented QC workflows and a microservice gateway contributing SNR Estimator, VAD, ASR, and Speaker Counter via TorchServe and Milvus (2023).
 - **Multispeaker Acoustic Model:** Reduced GPU usage 4× via a multispeaker acoustic model supporting 30-min fine-tuning and zero-shot cloning with 30s of audio (2023).
 - **Universal Multistream Vocoder:** Optimized the EV assistant cloud TTS vocoder with Universal Multistream HiFi-GAN, achieving 1.5× faster inference without quality loss (2022).
+- **AI Service User Interfaces:** Developed UI tools for AI services to support demos, data labeling, model evaluation, POC, and project bidding using Streamlit, Material UI React, and Wavesurfer.js (2022).
+- **Tacotron2 Enhancement:** Enhanced robustness of Tacotron2 by integrating Monotonic Alignment Attention, improving phoneme–speech alignment and eliminating noise artifacts (2021).
+- **Massive Speech Data Crawler:** Designed a large-scale automated speech data crawling and processing system covering data selection, formatting, denoising, transcription, quality ranking, and characteristic analysis (2021).
 
 ---
 
@@ -81,19 +92,42 @@ Bachelor of Science, Advanced Program in Computer Science (APCS K17), Ho Chi Min
 
 ---
 
+**Scooter Saigon Tour – Tourism Startup** &nbsp;|&nbsp; Ho Chi Minh City, Vietnam
+
+*SEO Developer – Founder* &nbsp;|&nbsp; Jan 2014 – Aug 2017
+- **Website Development:** Built a WordPress website with PHP backend and integrated VTCpay payment system.
+- **SEO & Online Marketing:** Optimized site content, built backlink networks, and managed social media channels to improve search rankings.
+
+---
+
+**Freelance AI Projects (selected):**
+Voice-Preserving Speech MT &nbsp;·&nbsp; Singing Voice Conversion &nbsp;·&nbsp; Pronunciation Assessment &nbsp;·&nbsp; Speech Enhancement & Noise Reduction &nbsp;·&nbsp; Sleep Stage Classification &nbsp;·&nbsp; Emotional Dubbing
+
+---
+
 ## Research Affiliations
 
 **Speech and Language Lab, Nanyang Technological University** &nbsp;|&nbsp; Singapore &nbsp;|&nbsp; Sep 2022 – Mar 2023
-Research Intern (Remote) — Sound event detection in urban areas, project with ST Engineering.
 
-**AI Lab, University of Science** &nbsp;|&nbsp; Ho Chi Minh City &nbsp;|&nbsp; Feb 2019 – Sep 2021
-Research Assistant — Built a 10 GB Vietnamese speech corpus; researched text normalization and phonology.
+Research Intern (Remote)
+- Participated in a government project with ST Engineering, developing and evaluating a model for classifying emergency sound events in urban areas.
+
+**Artificial Intelligence Lab, University of Science** &nbsp;|&nbsp; Ho Chi Minh City &nbsp;|&nbsp; Feb 2019 – Sep 2021
+
+Research Assistant
+- Built a Vietnamese speech corpus (19 GB) and conducted research on text normalization and phonology.
+- Organized ERC2019 – Emotion Recognition Challenge.
+- Teaching assistant at VNsigma Python beginner class, supported by the American Consulate.
 
 **Robotics & IoT Lab, University of Science** &nbsp;|&nbsp; Ho Chi Minh City &nbsp;|&nbsp; May 2019 – Sep 2021
-Research Assistant — Teaching assistant and coach for EVJ Makethon, FLL, and WRO robotics competitions.
+
+Research Assistant
+- Teacher for EV3 Mindstorm and coach for First Lego League (FLL), EVJ Makethon, and World Robot Olympiad (WRO) competitions.
 
 **Computational Linguistics Center, University of Science** &nbsp;|&nbsp; Ho Chi Minh City &nbsp;|&nbsp; Apr 2019 – Sep 2019
-Research Assistant — Teaching assistant guiding SDL Trados Studio for the English Linguistics faculty (USSH).
+
+Research Assistant
+- Teaching assistant for the Faculty of English Linguistics (USSH), guiding students in SDL Trados Studio, a computer-assisted translation software.
 
 ---
 

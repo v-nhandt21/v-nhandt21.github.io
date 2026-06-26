@@ -1,0 +1,268 @@
+%% CV – Do Tri Nhan | Speech AI Engineer (Healthcare) – AISG @ NTU
+\documentclass[10pt,a4paper]{article}
+
+\usepackage[top=0.4in, bottom=0.4in, left=0.55in, right=0.55in]{geometry}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{hyperref}
+\usepackage[T1]{fontenc}
+\usepackage{charter}
+\usepackage{xcolor}
+\usepackage{tabularx}
+\usepackage{microtype}
+\usepackage{fontawesome5}
+
+\definecolor{accent}{HTML}{2b4c7e}
+\definecolor{headcolor}{HTML}{1a1a2e}
+\definecolor{subtlegray}{HTML}{444444}
+
+\hypersetup{colorlinks=true, urlcolor=accent, linkcolor=accent}
+
+% ── Section title style ────────────────────────────────────────────
+\titleformat{\section}[block]
+  {\color{accent}\bfseries\normalsize}
+  {}{0em}{\MakeUppercase}
+  [\vspace{1pt}{\color{accent}\titlerule[0.8pt]}\vspace{2pt}]
+\titlespacing*{\section}{0pt}{7pt}{3pt}
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+\pagestyle{empty}
+
+% ── Compact list ───────────────────────────────────────────────────
+\setlist[itemize]{
+  itemsep=1pt, topsep=2pt, parsep=0pt,
+  leftmargin=1.3em, label={\color{accent}\small\textbullet}
+}
+
+% ── Entry: title | date / subtitle | location ─────────────────────
+\newcommand{\cventry}[4]{%
+  \noindent
+  \begin{tabular*}{\linewidth}{@{}l@{\extracolsep{\fill}}r@{}}
+    {\color{accent}\textbf{#1}} & \textit{\small #2} \\
+    \textit{\small #3} & \textit{\small #4}
+  \end{tabular*}%
+  \vspace{1pt}%
+}
+
+% ── Sub-role inside same company ───────────────────────────────────
+\newcommand{\cvsubrole}[2]{%
+  \noindent
+  \begin{tabular*}{\linewidth}{@{}l@{\extracolsep{\fill}}r@{}}
+    \textit{\small #1} & \textit{\small #2}
+  \end{tabular*}%
+  \vspace{1pt}%
+}
+
+% ── Single-line entry with date ────────────────────────────────────
+\newcommand{\cvline}[2]{%
+  \noindent
+  \begin{tabular*}{\linewidth}{@{}l@{\extracolsep{\fill}}r@{}}
+    #1 & \textit{\small #2}
+  \end{tabular*}%
+}
+
+\begin{document}
+
+% ══════════════════════════════════════════════════════════════════
+%  HEADER
+% ══════════════════════════════════════════════════════════════════
+\begin{center}
+  {\LARGE\bfseries\color{headcolor} Do Tri Nhan}\\[5pt]
+  \small\color{subtlegray}
+  \faEnvelope\;\href{mailto:dotrinhan99@gmail.com}{dotrinhan99@gmail.com}
+  \;\;$\vert$\;\;
+  \faPhone*\;+84-375-99-4743
+  \;\;$\vert$\;\;
+  \faGlobe\;\href{https://v-nhandt21.github.io/}{v-nhandt21.github.io}
+  \;\;$\vert$\;\;
+  \faMapMarker*\;Ho Chi Minh City, Vietnam
+\end{center}
+
+\vspace{1pt}
+
+% ══════════════════════════════════════════════════════════════════
+%  TECHNICAL SKILLS
+% ══════════════════════════════════════════════════════════════════
+\section{Technical Skills}
+
+{\color{accent}\textbf{Speech \& Audio:}} TTS, Speaker Verification \& Diarization, Voice Cloning \& Conversion, Anti-spoofing, Speech Enhancement, Sound Event Detection \\[3.5pt]
+{\color{accent}\textbf{ML \& LLM:}} PyTorch, ONNX, Triton, TorchServe, SLM, Reinforcement Learning, Agno Agent, RAG, Speech SSL \\[3.5pt]
+{\color{accent}\textbf{Engineering:}} Docker, FastAPI, Flask, RabbitMQ, Milvus, Qdrant Vector DB, Slurm, Datadog, Jenkins, Jfrog \\[3.5pt]
+{\color{accent}\textbf{Languages:}} Python (primary), C++, Java, React Vibe
+
+% ══════════════════════════════════════════════════════════════════
+%  EDUCATION
+% ══════════════════════════════════════════════════════════════════
+\section{Education}
+
+\cventry{VNUHCM -- University of Science}{Sep 2017 -- Jun 2021}
+        {Bachelor of Science, Advanced Program in Computer Science (APCS K17)}{Ho Chi Minh City, Vietnam}
+
+\vspace{1pt}
+\begin{itemize}
+  \item GPA: 3.83 / 4.0 \quad TOEFL ITP: 550 / 677
+\end{itemize}
+
+% ══════════════════════════════════════════════════════════════════
+%  EXPERIENCE
+% ══════════════════════════════════════════════════════════════════
+\section{Experience}
+
+% ── Vinfast ───────────────────────────────────────────────────────
+\cventry{Vinfast JSC}{Jun 2026 -- Present}
+        {AI Team Lead -- Speech Generation}{Ho Chi Minh City, Vietnam}
+\begin{itemize}
+  \item \textbf{Unified TTS Serving Gateway:} Architected a production FastAPI gateway consolidating multiple TTS model tiers and normalization backends — supporting streaming, async job queue, API key auth with per-key usage tracking, and horizontal shard deployment for multilingual production serving.
+  \item \textbf{TTS Normalization Automation Harness:} Designed an end-to-end QC automation framework with LLM-based error classification, BA-configurable per-project switch-code vocabulary management, automated Java SDK and prompt rebuild, and full regression evaluation — reducing engineering intervention for vocabulary updates to zero.
+\end{itemize}
+
+\vspace{4pt}
+
+% ── VinSmart Future ───────────────────────────────────────────────
+\cventry{VinSmart Future -- Vingroup JSC}{Feb 2026 -- Jun 2026}
+        {AI Team Lead -- Speech Generation}{Ho Chi Minh City, Vietnam}
+\begin{itemize}
+  \item \textbf{Research Team Leadership:} Lead a team of 6 members on speech generation: voice design, non-verbal audio, and reinforcement learning for speech synthesis.
+  \item \textbf{Voice Model Product Management:} Coordinate between research team and product projects; standardize quality assurance and release processes for voice models across three product lines: robot assistants, in-vehicle AI, and super-app voice mode.
+\end{itemize}
+
+\vspace{2pt}
+\cvsubrole{Senior AI Engineer -- Core AI Research}{Jul 2025 -- Feb 2026}
+\begin{itemize}
+  \item \textbf{Vietnamese Phoneme-Based Flow Matching TTS:} Developed a Vietnamese phoneme-adaptive fine-tuning TTS model achieving stable quality with low WER in production.
+  \item \textbf{TensorRT \& Triton Serving Optimization:} Optimized model serving with TensorRT and Triton Inference Server, achieving 2$\times$ throughput improvement and increased concurrent user capacity.
+  \item \textbf{Hybrid Text Normalization:} Developed a Small Language Model (SLM) combined with rule-based normalization in a hybrid pipeline, improving accuracy by 13\% over the rule-based baseline.
+\end{itemize}
+
+\vspace{4pt}
+
+% ── Vingroup Big Data Institute ───────────────────────────────────
+\cventry{Vingroup Big Data Institute -- Vingroup JSC}{Jan 2024 -- Jul 2025}
+        {Middle AI Engineer -- AI Agent \& Voice Biometric}{Hanoi, Vietnam}
+\begin{itemize}
+  \item \textbf{AI Agent with Knowledge Base:} Built a RAG-based AI agent with query processing, embedding, function calling, and automatic double-bot quality control evaluation (2025).
+  \item \textbf{Speech Data Warehouse:} Managed a team building a speech data warehouse for storage, querying, processing, release management, and natural language querying integration - Data Intelligence (2025).
+  \item \textbf{Streaming Diarization Optimization:} Optimized and served streaming diarization with Triton EEND-VC, achieving 2$\times$ speed and superior quality over third-party solutions (2025).
+  \item \textbf{Anti-spoofing Module:} Researched and deployed an anti-spoofing system with an EER of 3.75\%, combining RawBoost augmentation, speech SSL, and Graph Neural Networks (2024).
+\end{itemize}
+
+\vspace{2pt}
+\cvsubrole{AI Engineer -- Speech Synthesis \& Voice Biometric}{Oct 2021 -- Dec 2023}
+\begin{itemize}
+  \item \textbf{Smart AI Voice Recording Service:} Designed an AI voice recording service for insurance operations using Speaker Diarization, ASR, and Voice Biometrics to detect agent fraud (2023).
+  \item \textbf{Government Voice Biometric Project:} Implemented QC workflows and a microservice gateway contributing SNR Estimator, VAD, ASR, and Speaker Counter via TorchServe and Milvus (2023).
+  \item \textbf{Multispeaker Acoustic Model:} Reduced GPU usage 4$\times$ via a multispeaker acoustic model supporting 30-min fine-tuning and zero-shot cloning with 30\,s of audio (2023).
+  \item \textbf{Universal Multistream Vocoder:} Optimized the EV assistant cloud TTS vocoder with Universal Multistream HiFi-GAN, achieving 1.5$\times$ faster inference without quality loss (2022).
+\end{itemize}
+
+\vspace{4pt}
+
+% ── VinAI Research Institute ──────────────────────────────────────
+\cventry{VinAI Research Institute -- Vingroup JSC}{Dec 2020 -- Sep 2021}
+        {Engineering Resident -- ERP Batch 1}{Hanoi, Vietnam}
+\begin{itemize}
+  \item \textbf{Vietnamese TTS for Electric Vehicles:} Integrated state-of-the-art TTS (Tacotron2, FastSpeech2, GlowTTS, HiFi-GAN), optimized with ONNX Runtime for edge inference.
+  \item \textbf{SpeechMT:} Designed and deployed a real-time voice-based machine translation service containerized with Docker and served via FastAPI.
+  \item \textbf{Speech-Based QA for Car Manuals:} Developed a lightweight speech-interactive system for voice-driven car manual queries, deployed end-to-end.
+\end{itemize}
+
+\vspace{4pt}
+
+% ── KMS Technology ────────────────────────────────────────────────
+\cventry{KMS Technology}{Jun 2020 -- Sep 2020}
+        {Software Engineer -- Center of Excellence}{Ho Chi Minh City, Vietnam}
+\begin{itemize}
+  \item \textbf{RASA Chatbot Core Research:} Improved intent classification by combining Dense (ConveRT, BERT) and Sparse (TF-IDF, Count Vectors) features; evaluated on SQuAD data.
+  \item \textbf{Reading Comprehension Backend:} Built BIDAF-based reading comprehension services with AllenNLP, Flask, Swagger, Docker Compose, and RabbitMQ.
+\end{itemize}
+
+% ══════════════════════════════════════════════════════════════════
+%  RESEARCH AFFILIATIONS
+% ══════════════════════════════════════════════════════════════════
+\section{Research Affiliations}
+
+\cventry{Speech and Language Lab, Nanyang Technological University}{Sep 2022 -- Mar 2023}
+        {Research Intern (Remote)}{Singapore}
+\vspace{-2pt}{\small Sound event detection in urban areas, project with ST Engineering.}
+
+\vspace{4pt}
+\cventry{AI Lab, University of Science}{Feb 2019 -- Sep 2021}
+        {Research Assistant}{Ho Chi Minh City, Vietnam}
+\vspace{-2pt}{\small Built a 10\,GB Vietnamese speech corpus; researched text normalization and phonology.}
+
+\vspace{4pt}
+\cventry{Robotics \& IoT Lab, University of Science}{May 2019 -- Sep 2021}
+        {Research Assistant}{Ho Chi Minh City, Vietnam}
+\vspace{-2pt}{\small Teaching assistant and coach for EVJ Makethon, FLL, and WRO robotics competitions.}
+
+\vspace{4pt}
+\cventry{Computational Linguistics Center, University of Science}{Apr 2019 -- Sep 2019}
+        {Research Assistant}{Ho Chi Minh City, Vietnam}
+\vspace{-2pt}{\small Teaching assistant guiding SDL Trados Studio for the English Linguistics faculty (USSH).}
+
+% ══════════════════════════════════════════════════════════════════
+%  PUBLICATIONS
+% ══════════════════════════════════════════════════════════════════
+\section{Publications}
+
+\begin{itemize}
+  \item Unified Acoustic Representation Learning for Vietnamese Speech Classification Tasks. \textit{MAPR 2025.}
+  \item Analyzing the Correlation and Impact of Speech Evaluation Metrics on Speaker Verification and ASR. \textit{MAPR 2025.}
+  \item Adapting WavLM for Vietnamese Speaker Diarization in Real-world Conversations. \textit{MAPR 2025.}
+  \item Enhancing Deepfake Detection: WavLM and Advanced RawBoost Augmentation. \textit{RIVF 2024.}
+  \item Voice Attacker: Multi-Head Factorized Attentive Reconstructor and Gradient Reversal for Random Prosody Anonymization. \textit{Voice Privacy 2024.}
+  \item Sound Event Detection with Soft Labels Using Self-Attention for Global Scene Feature Extraction. \textit{DCASE 2023.}
+  \item FastSpeechStyle: Fast, Emotion-Controllable, High-Quality Speech Synthesis. \textit{International Journal of Asian Language Processing.}
+  \item Vietnamese Speech-based Question Answering over Car Manuals. \textit{DCAI/NeurIPS 2021.}
+  \item Vietnamese Speech Synthesis with End-to-End Model and Text Normalization. \textit{7th NAFOSTED 2020.}
+  \item Emotion Classification Using WaveNet Features with SpecAugment and EfficientNet. \textit{MediaEval 2020.}
+\end{itemize}
+
+\vspace{2pt}
+\noindent\textbf{PyPi package} \texttt{vinorm}: Vietnamese Text Normalization (34,933+ downloads / 6 months).\\
+\noindent\textbf{PyPi package} \texttt{viphoneme}: Vietnamese Grapheme-to-IPA Phonetization (4,195+ downloads / 6 months).\\[2pt]
+\noindent\textbf{Thesis:} DeepSpeechVC -- Voice Cloning Framework with Speech Synthesis and Voice Conversion.
+
+% ══════════════════════════════════════════════════════════════════
+%  AWARDS & RECOGNITION
+% ══════════════════════════════════════════════════════════════════
+\section{Awards \& Recognition}
+
+\begin{itemize}
+  \item \cvline{Outstanding Employee of the Year -- VinBigdata}{2023}
+  \item \cvline{First Place, VLSP TTS Emotional Speech Synthesis}{2022}
+  \item \cvline{First Prize, Science-A-Thon, 9th Vietnamese Summer School of Science}{2022}
+  \item \cvline{Outstanding Student Award in Artificial Intelligence, Ho Chi Minh City}{2021}
+  \item \cvline{Excellent Thesis -- Science and Technology Student Award}{2021}
+  \item \cvline{Runner-Up, KMS Hackathon}{2020}
+\end{itemize}
+
+% ══════════════════════════════════════════════════════════════════
+%  CERTIFICATIONS & COMPETITIONS
+% ══════════════════════════════════════════════════════════════════
+\section{Certifications \& Competitions}
+
+\begin{itemize}
+  \item \cvline{Contributed to obtaining ISO/IEC 19795-1:2021 (NIST/NVLAP) for Voice Biometric Testing}{2024}
+  \item \cvline{Participation, IEEE Spoken Language Technology Workshop Hackathon}{2022}
+  \item \cvline{7th/23 teams, IEEE Signal Processing Society's Signal Processing Cup}{2022}
+  \item \cvline{FPT Scholarship, Final Round, Code War Competition}{2019}
+  \item \cvline{Final Round, Samsung Collegiate Programming Cup}{2018}
+  \item \cvline{ACM-ICPC Vietnam National Programming Contest -- Rank 33}{2018}
+  \item \cvline{Self-Driving Cars Specialisation -- University of Toronto (Coursera)}{2018}
+\end{itemize}
+
+% ══════════════════════════════════════════════════════════════════
+%  VOLUNTEERING
+% ══════════════════════════════════════════════════════════════════
+\section{Volunteering}
+
+\begin{itemize}
+  \item \cvline{Volunteer for medical research on dental surgery at HCMC Oromaxillofacial Hospital}{2021}
+  \item \cvline{F1 contact tracing support during the Covid-19 pandemic}{2022}
+  \item \cvline{Organized ERC2019 -- Emotion Recognition Challenge}{2019}
+  \item \cvline{Teaching assistant at VNsigma Python beginner class (American Consulate)}{2019}
+\end{itemize}
+
+\end{document}
