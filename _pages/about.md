@@ -10,7 +10,7 @@ redirect_from:
 
 I am **Do Tri Nhan**, an AI Engineer specializing in **Speech and Signal Processing**, currently working as **AI Team Lead for Speech Generation** at [Vinfast JSC](https://vinfast.com), Ho Chi Minh City, Vietnam.
 
-<a href="/files/CV_short.pdf" class="btn btn--info" target="_blank">Download CV (Short)</a>
+<a href="/latex/CV_short.pdf" class="btn btn--info" target="_blank">Download CV (Short)</a>
 
 ## Research Interests
 

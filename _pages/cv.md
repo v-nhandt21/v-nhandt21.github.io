@@ -9,7 +9,7 @@ redirect_from:
 
 {% include base_path %}
 
-<a href="/files/CV_long.pdf" class="btn btn--info" target="_blank">Download Full CV (PDF)</a> &nbsp; <a href="/files/CV_short.pdf" class="btn btn--default" target="_blank">Download Short CV (PDF)</a>
+<a href="/latex/CV_long.pdf" class="btn btn--info" target="_blank">Download Full CV (PDF)</a> &nbsp; <a href="/latex/CV_short.pdf" class="btn btn--default" target="_blank">Download Short CV (PDF)</a>
 
 ---
 
