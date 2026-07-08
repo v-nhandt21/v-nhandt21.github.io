@@ -79,6 +79,31 @@ author_profile: true
   letter-spacing: 0.03em;
 }
 
+/* ── Mobile responsive: stats bar on one row ── */
+@media (max-width: 768px) {
+  .stats-bar {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    gap: 10px;
+    padding-bottom: 8px;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+  }
+  .stat-card {
+    flex: 0 0 auto;
+    min-width: 100px;
+    padding: 12px 14px;
+    scroll-snap-align: start;
+  }
+  .stat-card .num {
+    font-size: 1.4rem;
+  }
+  .stat-card .label {
+    font-size: 0.7rem;
+  }
+}
+
 /* ── Section titles ── */
 .section-title {
   font-size: 1.05rem;
