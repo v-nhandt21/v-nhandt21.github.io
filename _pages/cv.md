@@ -237,11 +237,11 @@ redirect_from:
 
 <div class="cv-entry">
   <div class="cv-entry-header">
-    <span class="cv-entry-company">Vinfast JSC</span>
+    <span class="cv-entry-company">Vinfast Automotive AI Development Institute - Vingroup JSC</span>
     <span class="cv-entry-location">Ho Chi Minh City, Vietnam</span>
   </div>
   <div class="cv-role-line">
-    <span class="cv-role">AI Team Lead &ndash; Speech Generation</span>
+    <span class="cv-role">Senior AI Engineer &ndash; Conversational Speech Technology</span>
     <span class="cv-date">Jun 2026 &ndash; Present</span>
   </div>
   <ul>
