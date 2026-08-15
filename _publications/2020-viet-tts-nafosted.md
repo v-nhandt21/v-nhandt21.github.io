@@ -2,10 +2,15 @@
 title: "Vietnamese Speech Synthesis with End-to-End Model and Text Normalization"
 collection: publications
 permalink: /publication/2020-viet-tts-nafosted
-date: 2020-01-02
-venue: "7th NAFOSTED Conference 2020"
-paperurl:
-citation: "Do Tri Nhan et al. (2020). Vietnamese Speech Synthesis with End-to-End Model and Text Normalization. <i>7th NAFOSTED Conference on Information and Computer Science 2020</i>."
+excerpt: 'Speech synthesis systems are now getting smarter and more natural thanks to the power of deep neural networks. However, each language has a different phonological and contextual characteristics, we have conducted experiments, statistics, and applied Vietnamese phonetics to improve speech synthesis systems based on Tacotron2 neural networks. Our methods achieve the accuracy of 97% in text normalization task, and the synthesized speeches with a MOS score of 3.97, asymptotic to 4.43 of the voices that are directly recorded. We also provide a library for standardizing Vietnamese text called Vinorm and a package that converts text into a phonetic format called Viphoneme, which is used as an input for end-to-end neural networks, make the synthesis process faster, more intelligent and natural than using character inputs.'
+date: 2020-01-01
+venue: '7th NAFOSTED Conference on Information and Computer Science (NICS)'
+paperurl: ''
+citation: '<b>Do Tri Nhan</b>, Nguyen Minh Tri, Cao Xuan Nam'
 ---
 
-End-to-end Vietnamese TTS integrating a text normalization pipeline (vinorm) with Tacotron2 and WaveGlow, demonstrating improved naturalness on Vietnamese prosody.
+[Download Paper](https://ieeexplore.ieee.org/document/9335905)
+
+<p style='text-align: justify;'>Speech synthesis systems are now getting smarter and more natural thanks to the power of deep neural networks. However, each language has a different phonological and contextual characteristics, we have conducted experiments, statistics, and applied Vietnamese phonetics to improve speech synthesis systems based on Tacotron2 neural networks. Our methods achieve the accuracy of 97% in text normalization task, and the synthesized speeches with a MOS score of 3.97, asymptotic to 4.43 of the voices that are directly recorded. We also provide a library for standardizing Vietnamese text called Vinorm and a package that converts text into a phonetic format called Viphoneme, which is used as an input for end-to-end neural networks, make the synthesis process faster, more intelligent and natural than using character inputs.</p>
+
+<iframe src="/files/nics.pdf" width="100%" height="4000"></iframe>

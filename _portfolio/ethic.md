@@ -5,7 +5,7 @@ collection: portfolio
 date: 2019-01-01
 ---
 
-<iframe src="/files/Ethics_in_the_voice_recreating_technology_of_Lyrebird.pdf" width="100%" height="2000"></iframe>
+<iframe src="/files/ethics-in-the-voice-recreating-technology-of-lyrebird.pdf" width="100%" height="2000"></iframe>
 
 <iframe src="/files/ethic.pdf" width="100%" height="2000"></iframe>
 

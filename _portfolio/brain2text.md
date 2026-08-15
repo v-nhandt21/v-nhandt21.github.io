@@ -3,6 +3,7 @@ title: "A Dual-Stream GRU-Conformer Architecture for Brain-to-Text Decoding from
 excerpt: "Decoding intended speech from intracortical neural signals using a Dual-Stream GRU-Conformer that encodes spike count and spike band power independently, achieving 9.38% WER on Brain-to-Text Benchmark '24.<br/><img src='/images/brain2text.png'>"
 collection: portfolio
 date: 2026-01-01
+published: false
 ---
 
 Anonymous submission to Interspeech 2026
@@ -90,7 +91,7 @@ Four-stage augmentation pipeline:
 
 ## Technical Report: Dual-Stream GRU-Conformer (SMU Research Framing - Do Tri Nhan, March 2026)
 
-<iframe src="/files/technical_report.pdf" width="100%" height="6000"></iframe>
+<iframe src="/files/technical-report.pdf" width="100%" height="6000"></iframe>
 
 ### Dataset Overview
 
@@ -156,7 +157,7 @@ Frozen Whisper decoder yields WER >200% (Sub 14/15). Hypotheses:
 
 ## Research Proposal: Biosignal-Enabled Speech Synthesis (SMU PhD)
 
-<iframe src="/files/biosignal_research_proposal.pdf" width="100%" height="6000"></iframe>
+<iframe src="/files/biosignal-research-proposal.pdf" width="100%" height="6000"></iframe>
 
 ### Research Scope
 

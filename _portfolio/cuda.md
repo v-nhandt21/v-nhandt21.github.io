@@ -5,7 +5,7 @@ collection: portfolio
 date: 2018-01-01
 ---
 
-<iframe src="/files/cuda_slide.pdf" width="100%" height="2000"></iframe>
+<iframe src="/files/cuda-slide.pdf" width="100%" height="2000"></iframe>
 
 <iframe src="/files/cuda.pdf" width="100%" height="2000"></iframe>
 

@@ -13,6 +13,6 @@ date: 2021-01-01
 
 <img src='/images/slt_Certificate.png'>
 
-<iframe src="/files/slt_proposal.pdf" width="100%" height="3000"></iframe>
+<iframe src="/files/slt-proposal.pdf" width="100%" height="3000"></iframe>
 
 <iframe src="/files/slt.pdf" width="100%" height="5000"></iframe>

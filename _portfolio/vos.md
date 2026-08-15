@@ -7,11 +7,11 @@ date: 2019-01-01
 
 [Github Repo](https://github.com/v-nhandt21/NICS_Appendix) 
 
-<iframe src="/files/VOS_Update_Base.pdf" width="100%" height="2000"></iframe>
+<iframe src="/files/vos-update-base.pdf" width="100%" height="2000"></iframe>
 
-<iframe src="/files/Voice_of_Southern_Frontend_Report.pdf" width="100%" height="2000"></iframe>
+<iframe src="/files/voice-of-southern-frontend-report.pdf" width="100%" height="2000"></iframe>
 
-<iframe src="/files/Statistics_and_Frontend_Improvements_for_Voice_of_Southern_Speech_Synthesis.pdf" width="100%" height="2000"></iframe>
+<iframe src="/files/statistics-and-frontend-improvements-for-voice-of-southern-speech-synthesis.pdf" width="100%" height="2000"></iframe>
 
 <iframe src="/files/vos.pdf" width="100%" height="2000"></iframe>
 
