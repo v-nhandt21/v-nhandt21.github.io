@@ -3,6 +3,8 @@ title: "Viphoneme"
 excerpt: "Pypi Package Viphoneme: Phonetization, Convert Vietnamese Grapheme to IPA. I did this project in my 3rd year of college, which converts raw text to phonemes of sound so that speech AI models can learn, this package is accessible and used by most projects Voice research project in Vietnam (not production) <br/><img src='/images/viphoneme.png'>"
 collection: portfolio
 date: 2020-01-01
+header:
+  teaser: "/images/viphoneme.png"
 ---
 
 # Project Custom from vPhon for convert Raw text to IPA

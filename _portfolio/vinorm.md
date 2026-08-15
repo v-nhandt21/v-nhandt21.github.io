@@ -3,6 +3,8 @@ title: "Vinorm"
 excerpt: "Python - NSW package for Vietnamese: Normalization system to convert numbers, abbreviations, and words that cannot be pronounced into syllables. I worked on this project at AILAB with an outstanding friend in APCS Program. Originally written in C++ then packaged into python for ease of use in research projects <br/><img src='/images/vinorm.png'>"
 collection: portfolio
 date: 2020-01-01
+header:
+  teaser: "/images/vinorm.png"
 ---
 
 ### Install ViNorm package

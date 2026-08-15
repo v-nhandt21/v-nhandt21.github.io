@@ -3,6 +3,8 @@ title: "The 9th International Workshop on Vietnamese Language and Speech Process
 excerpt: "FastSpeechStyle : Vietnamese Emotional Speech Synthesis for VLSP 2022 Shared Task. VLSP is the most prestigious and quality contest in Vietnam for speech and natural language processing, I was fortunate to join talented colleagues at Vinbigdata and won two first prizes. <br/><img src='/images/vlsp.png'>"
 collection: portfolio
 date: 2023-01-01
+header:
+  teaser: "/images/vlsp.png"
 ---
 
 <img src="http://v-nhandt21.github.io/images/vlsp_poster.png" alt="Example Image" width="1000" height="100%">

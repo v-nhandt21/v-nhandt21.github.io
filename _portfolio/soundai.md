@@ -3,6 +3,8 @@ title: "Music Voice Conversion - 1st The Sound of AI Hackathon 2022"
 excerpt: "Sing any song without speaking the language <br/><img src='/images/soundai.png'>"
 collection: portfolio
 date: 2022-01-01
+header:
+  teaser: "/images/soundai.png"
 ---
 
 [Github Repo](https://github.com/v-nhandt21/MusicVoiceConversion)

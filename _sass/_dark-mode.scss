@@ -79,6 +79,18 @@ html[data-theme="dark"] {
     &:after {
       border-color: #1b1e26 transparent;
     }
+
+    li {
+      color: #c7cdd6;
+
+      .fa, .fas, .fab, .far, .fal, .ai {
+        color: #8a919e;
+      }
+
+      &:hover {
+        background-color: rgba(74, 158, 218, 0.16);
+      }
+    }
   }
 
   /* Page content */
@@ -246,6 +258,24 @@ html[data-theme="dark"] {
   .btn-outline {
     color: #7db8f0 !important;
     border-color: #7db8f0;
+  }
+
+  /* ── Portfolio grid ── */
+  .portfolio-card {
+    background: #1b1e26;
+    border-color: #2a2e38;
+  }
+
+  .portfolio-card-img {
+    background: #14161c;
+  }
+
+  .portfolio-card-title {
+    color: #f1f3f6;
+  }
+
+  .portfolio-card-excerpt {
+    color: #9aa2b1;
   }
 
   .cv-download .btn-outline {

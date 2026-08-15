@@ -4,6 +4,8 @@ excerpt: "Decoding intended speech from intracortical neural signals using a Dua
 collection: portfolio
 date: 2026-01-01
 published: false
+header:
+  teaser: "/images/brain2text.png"
 ---
 
 Anonymous submission to Interspeech 2026

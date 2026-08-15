@@ -3,6 +3,8 @@ title: "Voice Assessment"
 excerpt: "This project is customized to use the latest ASR model Whisper-large, with additional implementation of a React UI and several other signal processing tweaks.. .<br/><img src='/images/assessment.png'>"
 collection: portfolio
 date: 2025-01-01
+header:
+  teaser: "/images/assessment.png"
 ---
 
 # Voice Pronunciation Assessment

@@ -7,8 +7,97 @@ author_profile: true
 
 {% include base_path %}
 
+<style>
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+  margin-top: 1em;
+}
 
-{% for post in site.portfolio reversed %}
-  {% include archive-single.html %}
-{% endfor %}
+@media (max-width: 900px) {
+  .portfolio-grid { grid-template-columns: repeat(2, 1fr); }
+}
 
+@media (max-width: 600px) {
+  .portfolio-grid { grid-template-columns: 1fr; }
+}
+
+.portfolio-card {
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  border: 1px solid #e8eaed;
+  border-radius: 8px;
+  overflow: hidden;
+  text-decoration: none !important;
+  color: inherit;
+}
+
+.portfolio-card-img {
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+  background: #f0f2f5;
+}
+
+.portfolio-card-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.portfolio-card-body {
+  padding: 14px 16px 16px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.portfolio-card-date {
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: #4a9eda;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  margin-bottom: 4px;
+}
+
+.portfolio-card-title {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #1a1a2e;
+  line-height: 1.35;
+  margin-bottom: 6px;
+}
+
+.portfolio-card-excerpt {
+  font-size: 0.85rem;
+  color: #555;
+  line-height: 1.5;
+  margin: 0;
+}
+</style>
+
+<div class="portfolio-grid reveal">
+  {% for post in site.portfolio reversed %}
+    {% if post.title %}
+      <a class="portfolio-card lift-hover" href="{{ base_path }}{{ post.url }}">
+        {% if post.header.teaser %}
+          <div class="portfolio-card-img zoom-hover">
+            <img src="{{ post.header.teaser | prepend: base_path }}" alt="{{ post.title }}">
+          </div>
+        {% endif %}
+        <div class="portfolio-card-body">
+          {% if post.date %}
+            <span class="portfolio-card-date">{{ post.date | date: "%Y" }}</span>
+          {% endif %}
+          <h2 class="portfolio-card-title">{{ post.title }}</h2>
+          {% if post.excerpt %}
+            <p class="portfolio-card-excerpt">{{ post.excerpt | strip_html | truncate: 130 }}</p>
+          {% endif %}
+        </div>
+      </a>
+    {% endif %}
+  {% endfor %}
+</div>
