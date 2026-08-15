@@ -1,0 +1,255 @@
+/* ==========================================================================
+   DARK MODE
+   Applied via [data-theme="dark"] on <html>, toggled by assets/js/enhancements.js
+   and persisted to localStorage. Selectors here intentionally carry higher
+   specificity than the page-scoped <style> blocks in home.html / cv.md so
+   they win regardless of source order.
+   ========================================================================== */
+
+html[data-theme="dark"] {
+  color-scheme: dark;
+
+  body {
+    background-color: #14161c;
+    color: #c7cdd6;
+  }
+
+  h1, h2, h3, h4, h5, h6,
+  .page__title,
+  .author__name {
+    color: #f1f3f6;
+  }
+
+  a {
+    color: #7db8f0;
+  }
+
+  a:hover {
+    color: #a7d1ff;
+  }
+
+  hr {
+    border-top-color: #2a2e38;
+  }
+
+  /* Masthead / nav */
+  .masthead {
+    background-color: #191c24;
+    border-bottom-color: #2a2e38;
+  }
+
+  .masthead__menu-item a {
+    color: #d7dbe2;
+  }
+
+  .greedy-nav {
+    background: #191c24;
+  }
+
+  .greedy-nav a {
+    color: #d7dbe2;
+  }
+
+  .greedy-nav .visible-links a:before {
+    background: #4a9eda;
+  }
+
+  .greedy-nav .hidden-links {
+    background: #191c24;
+    border-color: #2a2e38;
+
+    a {
+      color: #d7dbe2;
+    }
+  }
+
+  /* Sidebar / author profile */
+  .author__bio {
+    color: #9aa2b1;
+  }
+
+  .author__avatar img {
+    border-color: #2a2e38;
+  }
+
+  .author__urls {
+    background: #1b1e26;
+    border-color: #2a2e38;
+
+    &:after {
+      border-color: #1b1e26 transparent;
+    }
+  }
+
+  /* Page content */
+  .page__content,
+  .page__content p,
+  .page__content li,
+  .archive__item-excerpt {
+    color: #c7cdd6;
+  }
+
+  .page__meta {
+    color: #8a919e;
+  }
+
+  blockquote {
+    color: #9aa2b1;
+    border-left-color: #2a2e38;
+  }
+
+  code {
+    background: #1e2129;
+  }
+
+  table {
+    th, td {
+      border-color: #2a2e38;
+    }
+
+    tr:nth-child(even) {
+      background-color: #191c24;
+    }
+  }
+
+  /* Footer */
+  .page__footer {
+    background-color: #191c24;
+    border-top-color: #2a2e38;
+    color: #8a919e;
+  }
+
+  /* Enhancement utilities */
+  .lift-hover:hover,
+  .lift-hover:focus-within {
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.45), 0 4px 10px rgba(0, 0, 0, 0.3);
+  }
+
+  .timeline-item::before {
+    border-color: #14161c;
+  }
+
+  .theme-toggle {
+    border-color: rgba(215, 219, 226, 0.25);
+  }
+
+  /* ── Page-scoped classes from home.html / cv.md ── */
+  .hero {
+    background: linear-gradient(135deg, #0c0e14 0%, #1b3252 100%);
+  }
+
+  .stat-card {
+    background: #1b1e26;
+    border-color: #2a2e38;
+    border-left-color: #4a9eda;
+  }
+
+  .stat-card .num {
+    color: #7db8f0;
+  }
+
+  .stat-card .label {
+    color: #9aa2b1;
+  }
+
+  .section-title {
+    color: #f1f3f6;
+    border-bottom-color: #4a9eda;
+  }
+
+  .pub-list li,
+  .cv-list li,
+  .cv-entry {
+    border-bottom-color: #262a34;
+  }
+
+  .pub-list li:hover,
+  .cv-list li:hover {
+    background-color: #1b2130;
+  }
+
+  .timeline-date {
+    color: #7db8f0;
+  }
+
+  .timeline::before {
+    opacity: 0.5;
+  }
+
+  .pub-title {
+    color: #f1f3f6;
+  }
+
+  .pub-venue {
+    background: #1e2c42;
+    color: #9cc4ee;
+  }
+
+  .skill-group-label {
+    color: #7db8f0;
+  }
+
+  .skill-tag {
+    background: #1b2534;
+    border-color: #29405e;
+    color: #d7dbe2;
+  }
+
+  .view-more {
+    color: #7db8f0;
+    border-color: #7db8f0;
+  }
+
+  .view-more:hover {
+    color: #a7d1ff;
+    border-color: #a7d1ff;
+  }
+
+  .resume-img,
+  .cert-gallery img {
+    box-shadow: 0 2px 14px rgba(0, 0, 0, 0.55);
+  }
+
+  /* ── CV page ── */
+  .cv-entry-company,
+  .cv-entry ul li strong {
+    color: #f1f3f6;
+  }
+
+  .cv-entry-location,
+  .cv-date {
+    color: #8a919e;
+  }
+
+  .cv-role {
+    color: #7db8f0;
+  }
+
+  .cv-entry ul {
+    color: #c7cdd6;
+  }
+
+  .cv-list .year {
+    color: #7db8f0;
+  }
+
+  .pypi-block {
+    background: #1b1e26;
+    border-left-color: #4a9eda;
+  }
+
+  .pypi-block code {
+    background: #22262f;
+    color: #d7dbe2;
+  }
+
+  .btn-outline {
+    color: #7db8f0 !important;
+    border-color: #7db8f0;
+  }
+
+  .cv-download .btn-outline {
+    color: #7db8f0 !important;
+    border-color: #7db8f0;
+  }
+}

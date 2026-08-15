@@ -121,6 +121,14 @@ redirect_from:
   line-height: 1.6;
 }
 .pub-list li:last-child { border-bottom: none; }
+.pub-list li {
+  transition: transform 0.2s ease, background-color 0.2s ease;
+  border-radius: 4px;
+}
+.pub-list li:hover {
+  transform: translateX(6px);
+  background-color: #f5f8fc;
+}
 .pub-venue {
   display: inline-block;
   background: #eef3fb;
@@ -145,6 +153,14 @@ redirect_from:
   flex-wrap: wrap;
 }
 .cv-list li:last-child { border-bottom: none; }
+.cv-list li {
+  transition: transform 0.2s ease, background-color 0.2s ease;
+  border-radius: 4px;
+}
+.cv-list li:hover {
+  transform: translateX(6px);
+  background-color: #f5f8fc;
+}
 .cv-list .year {
   color: #2b4c7e;
   font-weight: 600;
@@ -158,69 +174,69 @@ redirect_from:
 </style>
 
 <!-- Download buttons -->
-<div class="cv-download">
-  <a href="/latex/CV_long.pdf" class="btn-primary" target="_blank"><i class="fa fa-download"></i> Download Full CV (PDF)</a>
+<div class="cv-download reveal">
+  <a href="/latex/CV_long.pdf" class="btn-primary btn-gradient" target="_blank"><i class="fa fa-download"></i> Download Full CV (PDF)</a>
   <a href="/latex/CV_short.pdf" class="btn-outline" target="_blank"><i class="fa fa-file-alt"></i> Short CV (PDF)</a>
 </div>
 
 <!-- ══ TECHNICAL SKILLS ══ -->
-<h2 class="section-title">Technical Skills</h2>
+<h2 class="section-title reveal">Technical Skills</h2>
 
 <div class="skill-group">
   <span class="skill-group-label">Speech & Audio</span>
   <span class="skill-tags">
-    <span class="skill-tag">TTS / Flow Matching</span>
-    <span class="skill-tag">Speaker Verification</span>
-    <span class="skill-tag">Diarization</span>
-    <span class="skill-tag">Voice Cloning</span>
-    <span class="skill-tag">Anti-spoofing</span>
-    <span class="skill-tag">Speech Enhancement</span>
-    <span class="skill-tag">Sound Event Detection</span>
+    <span class="skill-tag tag-hover">TTS / Flow Matching</span>
+    <span class="skill-tag tag-hover">Speaker Verification</span>
+    <span class="skill-tag tag-hover">Diarization</span>
+    <span class="skill-tag tag-hover">Voice Cloning</span>
+    <span class="skill-tag tag-hover">Anti-spoofing</span>
+    <span class="skill-tag tag-hover">Speech Enhancement</span>
+    <span class="skill-tag tag-hover">Sound Event Detection</span>
   </span>
 </div>
 <div class="skill-group">
   <span class="skill-group-label">ML & LLM</span>
   <span class="skill-tags">
-    <span class="skill-tag">PyTorch</span>
-    <span class="skill-tag">ONNX</span>
-    <span class="skill-tag">Triton</span>
-    <span class="skill-tag">TorchServe</span>
-    <span class="skill-tag">SLM</span>
-    <span class="skill-tag">Reinforcement Learning</span>
-    <span class="skill-tag">Agno Agent</span>
-    <span class="skill-tag">RAG</span>
-    <span class="skill-tag">Speech SSL</span>
+    <span class="skill-tag tag-hover">PyTorch</span>
+    <span class="skill-tag tag-hover">ONNX</span>
+    <span class="skill-tag tag-hover">Triton</span>
+    <span class="skill-tag tag-hover">TorchServe</span>
+    <span class="skill-tag tag-hover">SLM</span>
+    <span class="skill-tag tag-hover">Reinforcement Learning</span>
+    <span class="skill-tag tag-hover">Agno Agent</span>
+    <span class="skill-tag tag-hover">RAG</span>
+    <span class="skill-tag tag-hover">Speech SSL</span>
   </span>
 </div>
 <div class="skill-group">
   <span class="skill-group-label">Engineering</span>
   <span class="skill-tags">
-    <span class="skill-tag">Docker</span>
-    <span class="skill-tag">FastAPI</span>
-    <span class="skill-tag">Flask</span>
-    <span class="skill-tag">RabbitMQ</span>
-    <span class="skill-tag">Milvus</span>
-    <span class="skill-tag">Qdrant</span>
-    <span class="skill-tag">Slurm</span>
-    <span class="skill-tag">Datadog</span>
-    <span class="skill-tag">Jenkins</span>
-    <span class="skill-tag">Jfrog</span>
+    <span class="skill-tag tag-hover">Docker</span>
+    <span class="skill-tag tag-hover">FastAPI</span>
+    <span class="skill-tag tag-hover">Flask</span>
+    <span class="skill-tag tag-hover">RabbitMQ</span>
+    <span class="skill-tag tag-hover">Milvus</span>
+    <span class="skill-tag tag-hover">Qdrant</span>
+    <span class="skill-tag tag-hover">Slurm</span>
+    <span class="skill-tag tag-hover">Datadog</span>
+    <span class="skill-tag tag-hover">Jenkins</span>
+    <span class="skill-tag tag-hover">Jfrog</span>
   </span>
 </div>
 <div class="skill-group">
   <span class="skill-group-label">Languages</span>
   <span class="skill-tags">
-    <span class="skill-tag">Python</span>
-    <span class="skill-tag">C++</span>
-    <span class="skill-tag">Java</span>
-    <span class="skill-tag">React</span>
+    <span class="skill-tag tag-hover">Python</span>
+    <span class="skill-tag tag-hover">C++</span>
+    <span class="skill-tag tag-hover">Java</span>
+    <span class="skill-tag tag-hover">React</span>
   </span>
 </div>
 
 <!-- ══ EDUCATION ══ -->
-<h2 class="section-title">Education</h2>
+<h2 class="section-title reveal">Education</h2>
 
-<div class="cv-entry">
+<div class="cv-entry lift-hover">
   <div class="cv-entry-header">
     <span class="cv-entry-company">VNUHCM &ndash; University of Science</span>
     <span class="cv-entry-location">Ho Chi Minh City, Vietnam</span>
@@ -233,9 +249,9 @@ redirect_from:
 </div>
 
 <!-- ══ EXPERIENCE ══ -->
-<h2 class="section-title">Experience</h2>
+<h2 class="section-title reveal">Experience</h2>
 
-<div class="cv-entry">
+<div class="cv-entry lift-hover">
   <div class="cv-entry-header">
     <span class="cv-entry-company">Vinfast Automotive AI Development Institute - Vingroup JSC</span>
     <span class="cv-entry-location">Ho Chi Minh City, Vietnam</span>
@@ -250,7 +266,7 @@ redirect_from:
   </ul>
 </div>
 
-<div class="cv-entry">
+<div class="cv-entry lift-hover">
   <div class="cv-entry-header">
     <span class="cv-entry-company">VinSmart Future &ndash; Vingroup JSC</span>
     <span class="cv-entry-location">Ho Chi Minh City, Vietnam</span>
@@ -276,7 +292,7 @@ redirect_from:
   </div>
 </div>
 
-<div class="cv-entry">
+<div class="cv-entry lift-hover">
   <div class="cv-entry-header">
     <span class="cv-entry-company">Vingroup Big Data Institute &ndash; Vingroup JSC</span>
     <span class="cv-entry-location">Hanoi, Vietnam</span>
@@ -308,7 +324,7 @@ redirect_from:
   </div>
 </div>
 
-<div class="cv-entry">
+<div class="cv-entry lift-hover">
   <div class="cv-entry-header">
     <span class="cv-entry-company">VinAI Research Institute &ndash; Vingroup JSC</span>
     <span class="cv-entry-location">Hanoi, Vietnam</span>
@@ -324,7 +340,7 @@ redirect_from:
   </ul>
 </div>
 
-<div class="cv-entry">
+<div class="cv-entry lift-hover">
   <div class="cv-entry-header">
     <span class="cv-entry-company">KMS Technology</span>
     <span class="cv-entry-location">Ho Chi Minh City, Vietnam</span>
@@ -339,7 +355,7 @@ redirect_from:
   </ul>
 </div>
 
-<div class="cv-entry">
+<div class="cv-entry lift-hover">
   <div class="cv-entry-header">
     <span class="cv-entry-company">Scooter Saigon Tour &ndash; Tourism Startup</span>
     <span class="cv-entry-location">Ho Chi Minh City, Vietnam</span>
@@ -358,9 +374,9 @@ redirect_from:
 </div>
 
 <!-- ══ RESEARCH AFFILIATIONS ══ -->
-<h2 class="section-title">Research Affiliations</h2>
+<h2 class="section-title reveal">Research Affiliations</h2>
 
-<div class="cv-entry">
+<div class="cv-entry lift-hover">
   <div class="cv-entry-header">
     <span class="cv-entry-company">Speech and Language Lab, Nanyang Technological University</span>
     <span class="cv-entry-location">Singapore</span>
@@ -372,7 +388,7 @@ redirect_from:
   <ul><li>Government project with ST Engineering — classifying emergency sound events in urban areas.</li></ul>
 </div>
 
-<div class="cv-entry">
+<div class="cv-entry lift-hover">
   <div class="cv-entry-header">
     <span class="cv-entry-company">Artificial Intelligence Lab, University of Science</span>
     <span class="cv-entry-location">Ho Chi Minh City</span>
@@ -388,7 +404,7 @@ redirect_from:
   </ul>
 </div>
 
-<div class="cv-entry">
+<div class="cv-entry lift-hover">
   <div class="cv-entry-header">
     <span class="cv-entry-company">Robotics & IoT Lab, University of Science</span>
     <span class="cv-entry-location">Ho Chi Minh City</span>
@@ -400,7 +416,7 @@ redirect_from:
   <ul><li>Teacher for EV3 Mindstorm; coach for FLL, EVJ Makethon, and WRO competitions.</li></ul>
 </div>
 
-<div class="cv-entry">
+<div class="cv-entry lift-hover">
   <div class="cv-entry-header">
     <span class="cv-entry-company">Computational Linguistics Center, University of Science</span>
     <span class="cv-entry-location">Ho Chi Minh City</span>
@@ -413,9 +429,9 @@ redirect_from:
 </div>
 
 <!-- ══ PUBLICATIONS ══ -->
-<h2 class="section-title">Publications</h2>
+<h2 class="section-title reveal">Publications</h2>
 
-<ul class="pub-list">
+<ul class="pub-list reveal">
   <li><span class="pub-venue">MAPR 2025</span> Unified Acoustic Representation Learning for Vietnamese Speech Classification Tasks</li>
   <li><span class="pub-venue">MAPR 2025</span> Analyzing the Correlation and Impact of Speech Evaluation Metrics on Speaker Verification and ASR</li>
   <li><span class="pub-venue">MAPR 2025</span> Adapting WavLM for Vietnamese Speaker Diarization in Real-world Conversations</li>
@@ -439,9 +455,9 @@ redirect_from:
 </div>
 
 <!-- ══ AWARDS ══ -->
-<h2 class="section-title">Awards & Recognition</h2>
+<h2 class="section-title reveal">Awards & Recognition</h2>
 
-<ul class="cv-list">
+<ul class="cv-list reveal">
   <li><span>Outstanding Employee of the Year &ndash; VinBigdata</span><span class="year">2023</span></li>
   <li><span>First Place, VLSP TTS Emotional Speech Synthesis</span><span class="year">2022</span></li>
   <li><span>First Prize, Science-A-Thon, 9th Vietnamese Summer School of Science</span><span class="year">2022</span></li>
@@ -451,9 +467,9 @@ redirect_from:
 </ul>
 
 <!-- ══ CERTIFICATIONS ══ -->
-<h2 class="section-title">Certifications & Competitions</h2>
+<h2 class="section-title reveal">Certifications & Competitions</h2>
 
-<ul class="cv-list">
+<ul class="cv-list reveal">
   <li><span>ISO/IEC 19795-1:2021 (NIST/NVLAP) for Voice Biometric Testing</span><span class="year">2024</span></li>
   <li><span>IEEE Spoken Language Technology Workshop Hackathon</span><span class="year">2022</span></li>
   <li><span>7th/23 teams, IEEE Signal Processing Cup</span><span class="year">2022</span></li>
@@ -464,9 +480,9 @@ redirect_from:
 </ul>
 
 <!-- ══ VOLUNTEERING ══ -->
-<h2 class="section-title">Volunteering</h2>
+<h2 class="section-title reveal">Volunteering</h2>
 
-<ul class="cv-list">
+<ul class="cv-list reveal">
   <li><span>Volunteer for medical research on dental surgery at HCMC Oromaxillofacial Hospital</span><span class="year">2021</span></li>
   <li><span>F1 contact tracing support during the Covid-19 pandemic</span><span class="year">2022</span></li>
   <li><span>Organized ERC2019 &ndash; Emotion Recognition Challenge</span><span class="year">2019</span></li>
