@@ -432,6 +432,9 @@ redirect_from:
 <h2 class="section-title reveal">Publications</h2>
 
 <ul class="pub-list reveal">
+  <li><span class="pub-venue">APSIPA ASC 2026</span> ViInstruct: A Large-Scale Vietnamese Dataset for Instruction-Based Text-to-Speech Synthesis</li>
+  <li><span class="pub-venue">APSIPA ASC 2026</span> ViNonverbal: The First Vietnamese Nonverbal Speech Dataset via Scalable Pseudo-Labeling</li>
+  <li><span class="pub-venue">APSIPA ASC 2026</span> Vi-SparkRL: Enhancing Tonal Accuracy and Naturalness in Vietnamese TTS via Multi-Objective Rewards</li>
   <li><span class="pub-venue">MAPR 2025</span> Unified Acoustic Representation Learning for Vietnamese Speech Classification Tasks</li>
   <li><span class="pub-venue">MAPR 2025</span> Analyzing the Correlation and Impact of Speech Evaluation Metrics on Speaker Verification and ASR</li>
   <li><span class="pub-venue">MAPR 2025</span> Adapting WavLM for Vietnamese Speaker Diarization in Real-world Conversations</li>
