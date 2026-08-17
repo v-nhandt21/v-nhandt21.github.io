@@ -28,7 +28,7 @@ Instead of manually converting PDFs to PNGs every time you update your CV, these
 This will:
 - Build both `CV_long.pdf` and `CV_short.pdf` from LaTeX sources
 - Convert all PDFs to PNG images
-- Place images in the `images/` directory
+- Place images in the `images/resume/` directory
 
 ### Option 2: Convert Only
 
@@ -76,8 +76,8 @@ Edit `convert_cv_to_png.py` and modify the `CV_FILES` dictionary:
 
 ```python
 CV_FILES = {
-    "CV_short.pdf": "DoTriNhan_Resume_Concise_2026",
-    "CV_long.pdf": "DoTriNhan_Resume_Full_2026"
+    "CV_short.pdf": "concise",
+    "CV_long.pdf": "full"
 }
 ```
 
@@ -98,10 +98,10 @@ DPI = 300  # Higher = better quality but larger file size
    ```bash
    ./scripts/build_cv.sh
    ```
-3. Review generated images in `images/` directory
+3. Review generated images in `images/resume/` directory
 4. Commit and push changes:
    ```bash
-   git add latex/ images/
+   git add latex/ images/resume/
    git commit -m "Update CV"
    git push
    ```
@@ -115,7 +115,7 @@ You can automate this further by adding a pre-commit hook:
 #!/bin/bash
 if git diff --cached --name-only | grep -q "latex/CV_"; then
     ./scripts/build_cv.sh
-    git add images/DoTriNhan_Resume_*.png
+    git add images/resume/*.png
 fi
 ```
 
@@ -125,12 +125,12 @@ fi
 - `CV_long.pdf` - Full CV (3 pages)
 - `CV_short.pdf` - Concise CV (2 pages)
 
-### PNGs (in `images/` directory)
-- `DoTriNhan_Resume_Concise_2026-1.png`
-- `DoTriNhan_Resume_Concise_2026-2.png`
-- `DoTriNhan_Resume_Full_2026-1.png`
-- `DoTriNhan_Resume_Full_2026-2.png`
-- `DoTriNhan_Resume_Full_2026-3.png`
+### PNGs (in `images/resume/` directory)
+- `concise-1.png`
+- `concise-2.png`
+- `full-1.png`
+- `full-2.png`
+- `full-3.png`
 
 ## Troubleshooting
 
@@ -194,7 +194,7 @@ jobs:
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
-          git add images/DoTriNhan_Resume_*.png latex/*.pdf
+          git add images/resume/*.png latex/*.pdf
           git commit -m "Auto-update CV images" || echo "No changes"
           git push
 ```

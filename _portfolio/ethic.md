@@ -1,10 +1,10 @@
 ---
 title: "Ethics in the voice recreating technology or Voice Cloning (AI Ethic)"
-excerpt: "Technology is growing rapidly, especially the explosion of artificial intelligence in recent years has raised many concerns about the danger of the development itself <br/><img src='/images/ethic.png'>"
+excerpt: "Technology is growing rapidly, especially the explosion of artificial intelligence in recent years has raised many concerns about the danger of the development itself <br/><img src='/images/portfolio/ethic/teaser.png'>"
 collection: portfolio
 date: 2019-01-01
 header:
-  teaser: "/images/ethic.png"
+  teaser: "/images/portfolio/ethic/teaser.png"
 ---
 
 <iframe src="/files/ethics-in-the-voice-recreating-technology-of-lyrebird.pdf" width="100%" height="2000"></iframe>

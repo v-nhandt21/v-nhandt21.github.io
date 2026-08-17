@@ -14,7 +14,7 @@ description              : &description "AI Engineer in Speech and Signal Proces
 url                      : https://v-nhandt21.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : "v-nhandt21.github.io"
-teaser                   :  # filename of teaser fallback teaser image placed in /images/, .e.g. "500x300.png"
+teaser                   :  # filename of fallback teaser image placed in /images/, e.g. "_unused/500x300.png"
 breadcrumbs              : false # true, false (default)
 words_per_minute         : 160
 future                   : true
@@ -62,7 +62,7 @@ facebook:
   username               :
   app_id                 :
   publisher              :
-og_image                 : "me.jpg"  # Open Graph/Twitter default site image
+og_image                 : "profile/avatar.jpg"  # Open Graph/Twitter default site image
 # For specifying social profiles
 # - https://developers.google.com/structured-data/customize/social-profiles
 social:
@@ -81,7 +81,7 @@ analytics:
 # Site Author
 author:
   name             : "Do Tri Nhan"
-  avatar           : "me.jpg"
+  avatar           : "profile/avatar.jpg"
   bio              : "AI Engineer in Speech and Signal Processing"
   location         : "Vietnam"
   employer         :

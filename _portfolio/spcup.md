@@ -1,10 +1,10 @@
 ---
 title: "Synthetic Speech Attribution - 2022 IEEE Signal Processing Cup"
-excerpt: "Fake synthetic speech audio tracks can be generated through a wide variety of available methods. Given an audio recording representing a synthetically generated speech track, to detect which method among a list of candidate ones has been used to synthesize the speech. <br/><img src='/images/spcup.png'>"
+excerpt: "Fake synthetic speech audio tracks can be generated through a wide variety of available methods. Given an audio recording representing a synthetically generated speech track, to detect which method among a list of candidate ones has been used to synthesize the speech. <br/><img src='/images/portfolio/spcup/teaser.png'>"
 collection: portfolio
 date: 2022-01-01
 header:
-  teaser: "/images/spcup.png"
+  teaser: "/images/portfolio/spcup/teaser.png"
 ---
 
 This competition is sponsored by the IEEE Signal Processing Society and MathWorks
@@ -17,6 +17,6 @@ Competition Homepage: https://signalprocessingsociety.org/community-involvement/
 
 Ranked 7th for this competition
 
-<img src='/images/spcup_rank.png'>
+<img src='/images/portfolio/spcup/ranking.png'>
 
 <iframe src="/files/spcup.pdf" width="100%" height="6000"></iframe>

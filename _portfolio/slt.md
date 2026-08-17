@@ -1,10 +1,10 @@
 ---
 title: "Voice-Preserving Speech Machine Translation - STL Hackathon (Quatar 2022)"
-excerpt: "Speech Translation for Low Resource Language with Voice I/O and Preserve the Characteristics of the Voice Input <br/><img src='/images/slt.png'>"
+excerpt: "Speech Translation for Low Resource Language with Voice I/O and Preserve the Characteristics of the Voice Input <br/><img src='/images/portfolio/slt/teaser.png'>"
 collection: portfolio
 date: 2021-01-01
 header:
-  teaser: "/images/slt.png"
+  teaser: "/images/portfolio/slt/teaser.png"
 ---
 
 [Hackathon Page](https://slt2022.org/hackathon.php)
@@ -13,7 +13,7 @@ header:
 
 [Github Repo](https://github.com/v-nhandt21/Voice-Preserving-Speech-Machine-Translation)
 
-<img src='/images/slt_Certificate.png'>
+<img src='/images/portfolio/slt/certificate.png'>
 
 <iframe src="/files/slt-proposal.pdf" width="100%" height="3000"></iframe>
 

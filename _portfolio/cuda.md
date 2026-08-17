@@ -1,10 +1,10 @@
 ---
 title: "CUDA programing language"
-excerpt: "CUDA is architecture and programming model developed by NVIDIA to run parallel computing on graphics processing units (GPUs) CUDA is the acronym for Compute Unified Device Architecture <br/><img src='/images/cuda.png'>"
+excerpt: "CUDA is architecture and programming model developed by NVIDIA to run parallel computing on graphics processing units (GPUs) CUDA is the acronym for Compute Unified Device Architecture <br/><img src='/images/portfolio/cuda/teaser.png'>"
 collection: portfolio
 date: 2018-01-01
 header:
-  teaser: "/images/cuda.png"
+  teaser: "/images/portfolio/cuda/teaser.png"
 ---
 
 <iframe src="/files/cuda-slide.pdf" width="100%" height="2000"></iframe>

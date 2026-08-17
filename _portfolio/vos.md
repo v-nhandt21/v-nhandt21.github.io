@@ -1,10 +1,10 @@
 ---
 title: "Statistics and Frontend Improvements for Voice of Southern Speech Synthesis (AILAB)"
-excerpt: "This report aim to analyze the performance of Voice of Southern TTS system and take an overview about Vietnamese TTS. Some statistics and improvements for Frontend of VOS are also given based on the popular syllables nowadays.<br/><img src='/images/vos.png'>"
+excerpt: "This report aim to analyze the performance of Voice of Southern TTS system and take an overview about Vietnamese TTS. Some statistics and improvements for Frontend of VOS are also given based on the popular syllables nowadays.<br/><img src='/images/portfolio/vos/teaser.png'>"
 collection: portfolio
 date: 2019-01-01
 header:
-  teaser: "/images/vos.png"
+  teaser: "/images/portfolio/vos/teaser.png"
 ---
 
 [Github Repo](https://github.com/v-nhandt21/NICS_Appendix) 

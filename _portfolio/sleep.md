@@ -1,10 +1,10 @@
 ---
 title: "Sleep Stage Classification with Multi-Scale Multi-Period CNN"
-excerpt: "Sleep stage classification refers to the process of categorizing different stages of sleep based on the patterns and characteristics of brain activity.<br/><img src='/images/Sleep/sleep.png'>"
+excerpt: "Sleep stage classification refers to the process of categorizing different stages of sleep based on the patterns and characteristics of brain activity.<br/><img src='/images/portfolio/sleep/teaser.png'>"
 collection: portfolio
 date: 2021-01-01
 header:
-  teaser: "/images/Sleep/sleep.png"
+  teaser: "/images/portfolio/sleep/teaser.png"
 ---
 
 Freelance Project
@@ -19,11 +19,11 @@ Target: ← Reproduce:
 
 Sleep stage classification refers to the process of categorizing different stages of sleep based on the patterns and characteristics of brain activity, eye movements, muscle tone, and other physiological parameters. Sleep is not a uniform state but rather consists of distinct stages that repeat cyclically throughout the night.
 
-<img src='/images/Sleep/Untitled.png'>
+<img src='/images/portfolio/sleep/chart-01.png'>
 
 Traditionally, sleep stage classification has been performed using polysomnography (PSG), which involves recording various physiological signals during sleep, including electroencephalography (EEG), electrooculography (EOG), electromyography (EMG), and other measurements. These signals provide information about brain wave patterns, eye movements, and muscle activity, which can be used to differentiate different stages of sleep.
 
-<img src='/images/Sleep/Untitled_1.png'>
+<img src='/images/portfolio/sleep/chart-02.png'>
 
 The standard sleep staging system typically includes the following stages:
 
@@ -34,7 +34,7 @@ a. Stage N1: This is the transition stage between wakefulness and sleep. It is a
 b. Stage N2: This stage represents the majority of the sleep cycle and is characterized by the presence of sleep spindles (bursts of brain wave activity) and K-complexes (sharp waveforms).
 c. Stage N3 (also known as slow-wave sleep or deep sleep): This is the deepest sleep stage, featuring slow brain waves known as delta waves. It is associated with physical restoration, hormone regulation, and memory consolidation.
 
-<img src='/images/Sleep/Untitled_2.png'>
+<img src='/images/portfolio/sleep/chart-03.png'>
 
 Sleep stage classification algorithms utilize machine learning techniques, such as artificial neural networks, support vector machines, or hidden Markov models, to analyze the recorded signals and classify them into the different sleep stages. These algorithms are trained on large datasets of manually scored sleep recordings to learn the patterns associated with each sleep stage.
 
@@ -42,13 +42,13 @@ Accurate sleep stage classification is crucial for sleep research, clinical slee
 
 Application and Motivation: [https://www.youtube.com/watch?v=0MgzXevxHRw](https://www.youtube.com/watch?v=0MgzXevxHRw)
 
-<img src='/images/Sleep/Untitled_3.png'>
+<img src='/images/portfolio/sleep/chart-04.png'>
 
 ---
 
 ## ****An Attention-Based Deep Learning Approach for Sleep Stage Classification With Single-Channel EEG****
 
-<img src='/images/Sleep/Untitled_4.png'>
+<img src='/images/portfolio/sleep/chart-05.png'>
 
 The paper proposes a new deep-learning architecture called AttnSleep for automatic sleep stage classification using single-channel EEG signals. Sleep stage classification is important for measuring sleep quality.
 
@@ -62,7 +62,7 @@ The researchers have made their source codes, experimental data, and supplementa
 
 ## **Data Preparation and Pre-processing:**
 
-<img src='/images/Sleep/Untitled_5.png'>
+<img src='/images/portfolio/sleep/chart-06.png'>
 
 - **Sleep EDF 20:**
     - Run this bash to download:
@@ -91,11 +91,11 @@ The researchers have made their source codes, experimental data, and supplementa
     
     - Request DATA:
     
-    <img src='/images/Sleep/Untitled_6.png'>
+    <img src='/images/portfolio/sleep/chart-07.png'>
     
     - Install Ruby ← to solve package dependency of Ruby and Ruby version manager (rvm)
     
-    <img src='/images/Sleep/Untitled_7.png'>
+    <img src='/images/portfolio/sleep/chart-08.png'>
     
     - Install Gem in Ruby:
     
@@ -103,7 +103,7 @@ The researchers have made their source codes, experimental data, and supplementa
     
     - [https://sleepdata.org/datasets/shhs](https://sleepdata.org/datasets/shhs)
     
-    <img src='/images/Sleep/Untitled_8.png'>
+    <img src='/images/portfolio/sleep/chart-09.png'>
     
     - Download Data:
     
@@ -127,15 +127,15 @@ Another Way: Download Preprocess DATA Directly From: [https://researchdata.ntu.e
 
 Viewer EDF: [https://bilalzonjy.github.io/EDFViewer/EDFViewer.html](https://bilalzonjy.github.io/EDFViewer/EDFViewer.html)
 
-<img src='/images/Sleep/Untitled_9.png'>
+<img src='/images/portfolio/sleep/chart-10.png'>
 
-<img src='/images/Sleep/Untitled_10.png'>
+<img src='/images/portfolio/sleep/chart-11.png'>
 
-<img src='/images/Sleep/Untitled_11.png'>
+<img src='/images/portfolio/sleep/chart-12.png'>
 
 Sleep Stage W
 
-<img src='/images/Sleep/Untitled_12.png'>
+<img src='/images/portfolio/sleep/chart-13.png'>
 
 Sleep Stage 1
 
@@ -161,11 +161,11 @@ python -m pip install mne=='0.20.7'
 
 ## Re**produce**
 
-<img src='/images/Sleep/Untitled_13.png'>
+<img src='/images/portfolio/sleep/chart-14.png'>
 
 Target:
 
-<img src='/images/Sleep/Untitled_14.png'>
+<img src='/images/portfolio/sleep/chart-15.png'>
 
 [https://github.com/emadeldeen24/AttnSleep](https://github.com/emadeldeen24/AttnSleep)
 
@@ -195,29 +195,29 @@ Proposed Method:
 
 **Ex1: Reproduce**
 
-<img src='/images/Sleep//Untitled_15.png'>
+<img src='/images/portfolio/sleep/chart-16.png'>
 
 Result for Sleep-EDF-20
 
 **Ex2: Transformer → Conformer**
 
-<img src='/images/Sleep/Untitled_16.png'>
+<img src='/images/portfolio/sleep/chart-17.png'>
 
 **Ex3: Multiscale + Multiperiod CRNN**
 
-<img src='/images/Sleep/Untitled_17.png'>
+<img src='/images/portfolio/sleep/chart-18.png'>
 
-<img src='/images/Sleep/Untitled_18.png'>
+<img src='/images/portfolio/sleep/chart-19.png'>
 
-<img src='/images/Sleep/Untitled_19.png'>
+<img src='/images/portfolio/sleep/chart-20.png'>
 
-<img src='/images/Sleep/Untitled_20.png'>
+<img src='/images/portfolio/sleep/chart-21.png'>
 
-<img src='/images/Sleep/Untitled_21.png'>
+<img src='/images/portfolio/sleep/chart-22.png'>
 
 ## Negative Analysis
 
-<img src='/images/Sleep/Untitled_22.png'>
+<img src='/images/portfolio/sleep/chart-23.png'>
 
 Prediction and Ground truth for sleep stage of an record
 

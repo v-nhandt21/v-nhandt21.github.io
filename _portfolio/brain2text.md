@@ -1,11 +1,11 @@
 ---
 title: "A Dual-Stream GRU-Conformer Architecture for Brain-to-Text Decoding from Utah Array Recordings"
-excerpt: "Decoding intended speech from intracortical neural signals using a Dual-Stream GRU-Conformer that encodes spike count and spike band power independently, achieving 9.38% WER on Brain-to-Text Benchmark '24.<br/><img src='/images/brain2text.png'>"
+excerpt: "Decoding intended speech from intracortical neural signals using a Dual-Stream GRU-Conformer that encodes spike count and spike band power independently, achieving 9.38% WER on Brain-to-Text Benchmark '24.<br/><img src='/images/portfolio/brain2text/teaser.png'>"
 collection: portfolio
 date: 2026-01-01
 published: false
 header:
-  teaser: "/images/brain2text.png"
+  teaser: "/images/portfolio/brain2text/teaser.png"
 ---
 
 Anonymous submission to Interspeech 2026

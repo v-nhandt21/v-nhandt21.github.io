@@ -19,13 +19,13 @@ import sys
 # Configuration
 PROJECT_ROOT = Path(__file__).parent.parent
 LATEX_DIR = PROJECT_ROOT / "latex"
-IMAGES_DIR = PROJECT_ROOT / "images"
+IMAGES_DIR = PROJECT_ROOT / "images" / "resume"
 DPI = 300  # High quality for web display
 
 # CV files to process
 CV_FILES = {
-    "CV_short.pdf": "DoTriNhan_Resume_Concise_2026",
-    "CV_long.pdf": "DoTriNhan_Resume_Full_2026"
+    "CV_short.pdf": "concise",
+    "CV_long.pdf": "full"
 }
 
 def convert_pdf_to_png(pdf_path, output_prefix, dpi=300):

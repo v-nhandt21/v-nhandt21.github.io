@@ -8,6 +8,6 @@ venue: 'Paper'
 paperurl: ''
 citation: '<b>Nhan Tri Do</b>'
 ---
-<!-- <img src='/images/voiceprivacy.png'> -->
+<!-- <img src='/images/publications/voice-attacker-diagram.png'> -->
 
 <iframe src="/files/voice-attacker-leveraging-multi-head-factorized-attentive-wavlm-reconstructor-and-gradient-reversal-for-random-prosody-anonymization.pdf" width="100%" height="3500"></iframe>

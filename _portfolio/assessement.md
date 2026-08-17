@@ -1,16 +1,16 @@
 ---
 title: "Voice Assessment"
-excerpt: "This project is customized to use the latest ASR model Whisper-large, with additional implementation of a React UI and several other signal processing tweaks.. .<br/><img src='/images/assessment.png'>"
+excerpt: "This project is customized to use the latest ASR model Whisper-large, with additional implementation of a React UI and several other signal processing tweaks.. .<br/><img src='/images/portfolio/assessment/teaser.png'>"
 collection: portfolio
 date: 2025-01-01
 header:
-  teaser: "/images/assessment.png"
+  teaser: "/images/portfolio/assessment/teaser.png"
 ---
 
 # Voice Pronunciation Assessment
 This project is based on [ai-pronunciation-trainer](https://github.com/Thiagohgl/ai-pronunciation-trainer), customized to use the latest ASR model Whisper-large, with additional implementation of a React UI and several other signal processing tweaks.
 
-![](/images/assessment.png)
+![](/images/portfolio/assessment/teaser.png)
 
 
 ## Installation 
