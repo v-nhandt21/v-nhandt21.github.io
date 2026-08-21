@@ -291,7 +291,18 @@ html[data-theme="dark"] {
   }
 
   .pub-card-venue {
-    color: #8a919e;
+    background: #262a34;
+    color: #aab1bd;
+  }
+
+  .pub-card-status {
+    background: #1b3a24;
+    color: #81c995;
+  }
+
+  .pub-card-status.is-withdrawn {
+    background: #3a1f1e;
+    color: #f28b82;
   }
 
   .pub-card-title {

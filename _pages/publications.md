@@ -15,22 +15,24 @@ author_profile: true
 <style>
 .pub-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 22px;
   margin-top: 1em;
 }
 
 @media (max-width: 900px) {
-  .pub-grid { grid-template-columns: repeat(2, 1fr); }
+  .pub-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
 
 @media (max-width: 600px) {
-  .pub-grid { grid-template-columns: 1fr; }
+  .pub-grid { grid-template-columns: minmax(0, 1fr); }
 }
 
 .pub-card {
   display: flex;
   flex-direction: column;
+  min-width: 0;
+  min-height: 340px;
   background: #fff;
   border: 1px solid #e8eaed;
   border-top: 3px solid #2b4c7e;
@@ -58,11 +60,33 @@ author_profile: true
 }
 
 .pub-card-venue {
-  font-size: 0.75rem;
-  color: #888;
+  display: inline-block;
+  background: #f2f2f5;
+  color: #666;
+  border-radius: 3px;
+  padding: 1px 7px;
+  font-size: 0.72rem;
+  font-weight: 700;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+}
+
+.pub-card-status {
+  display: inline-block;
+  background: #e6f4ea;
+  color: #1e7e34;
+  border-radius: 3px;
+  padding: 1px 7px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  white-space: nowrap;
+  margin-left: auto;
+}
+
+.pub-card-status.is-withdrawn {
+  background: #fdecea;
+  color: #b3261e;
 }
 
 .pub-card-title {
@@ -109,6 +133,7 @@ author_profile: true
         <div class="pub-card-meta">
           {% if post.date %}<span class="pub-card-year">{{ post.date | date: "%Y" }}</span>{% endif %}
           {% if post.venue %}<span class="pub-card-venue">{{ post.venue }}</span>{% endif %}
+          <span class="pub-card-status{% if post.status == 'Withdrawn' %} is-withdrawn{% endif %}">{{ post.status | default: "Published" }}</span>
         </div>
         <h2 class="pub-card-title">{{ post.title }}</h2>
         {% if post.citation %}<p class="pub-card-citation">{{ post.citation }}</p>{% endif %}

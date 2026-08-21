@@ -11,3 +11,13 @@ citation: '<b>Nhan Tri Do</b>'
 <!-- <img src='/images/publications/voice-attacker-diagram.png'> -->
 
 <iframe src="/files/voice-attacker-leveraging-multi-head-factorized-attentive-wavlm-reconstructor-and-gradient-reversal-for-random-prosody-anonymization.pdf" width="100%" height="3500"></iframe>
+
+## Cited in the Official Challenge Overview
+
+This work (Team A.4 / SpeechWorld) is cited in the official overview paper of the First VoicePrivacy Attacker Challenge:
+
+Tomashenko, N., Miao, X., Vincent, E., & Yamagishi, J. (2026). *Privacy Attacks on Voice Anonymization Systems: Overview and Key Findings from the First VoicePrivacy Attacker Challenge.* Computer Speech and Language, In press. [[PDF]](/files/voiceprivacy-attacker-challenge-overview-tomashenko-2026.pdf)
+
+<img src='/images/publications/voice-attacker-team-a4-methods-excerpt.jpg' style="max-width: 100%;">
+
+<img src='/images/publications/voice-attacker-challenge-participating-teams.jpg' style="max-width: 100%;">

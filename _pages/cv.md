@@ -263,6 +263,7 @@ redirect_from:
   <ul>
     <li><strong>Unified TTS Serving Gateway:</strong> Architected a production FastAPI gateway consolidating multiple TTS model tiers and normalization backends — supporting streaming, async job queue, API key auth with per-key usage tracking, and horizontal shard deployment for multilingual production serving.</li>
     <li><strong>TTS Normalization Automation Harness:</strong> Designed an end-to-end QC automation framework with LLM-based error classification, BA-configurable per-project switch-code vocabulary management, automated Java SDK and prompt rebuild, and full regression evaluation — reducing engineering intervention for vocabulary updates to zero.</li>
+    <li><strong>TTS Core Module:</strong> In charge of model optimization, including an automated annotation and GRPO training framework and diffusion step distillation — improving inference speed, reducing hallucinations, code-switching pronunciation, and natural pausing.</li>
   </ul>
 </div>
 
@@ -287,7 +288,7 @@ redirect_from:
     <ul>
       <li><strong>Vietnamese Phoneme-Based Flow Matching TTS:</strong> Developed a phoneme-adaptive fine-tuning TTS model achieving stable quality with low WER in production.</li>
       <li><strong>TensorRT & Triton Serving Optimization:</strong> Achieved 2&times; throughput improvement and increased concurrent user capacity.</li>
-      <li><strong>Hybrid Text Normalization:</strong> SLM + rule-based hybrid pipeline improving accuracy 13% over the rule-based baseline.</li>
+      <li><strong>Hybrid Text Normalization:</strong> SLM + rule-based hybrid pipeline improving accuracy 4.36% over the rule-based baseline.</li>
     </ul>
   </div>
 </div>

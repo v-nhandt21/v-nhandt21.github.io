@@ -1,10 +1,10 @@
 ---
-permalink: /about
+permalink: /about/
 title: "About Me"
 excerpt: "About me"
 author_profile: true
 redirect_from:
-  - /about/
+  - /about
   - /about.html
 ---
 
@@ -16,7 +16,7 @@ I am **Do Tri Nhan**, an AI Engineer specializing in **Speech and Signal Process
 
 My work spans the full speech AI stack — from core research to production deployment:
 
-- **Speech Synthesis (TTS):** Flow Matching, FastSpeech2, Tacotron2, GlowTTS, voice cloning & conversion, zero-shot TTS
+- **Speech Synthesis (TTS):** Flow Matching, FastSpeech2, Tacotron2, GlowTTS, voice cloning & conversion, zero-shot TTS, GRPO-based reinforcement fine-tuning, diffusion step distillation
 - **Speaker Verification & Diarization:** EEND-VC, streaming diarization, voice biometrics, anti-spoofing
 - **Speech Self-Supervised Learning (SSL):** WavLM, representation learning for Vietnamese speech
 - **Text Normalization & Phonology:** Vietnamese NLP, grapheme-to-phoneme, hybrid rule-LLM pipelines
@@ -28,7 +28,7 @@ I completed my **Bachelor of Science in Computer Science (Advanced Program, APCS
 
 During my undergraduate years, I was a Research Assistant at the **AI Lab** and **Robotics & IoT Lab** at USSH, where I built a 19 GB Vietnamese speech corpus and researched text normalization and phonology. I later interned remotely at the **Speech and Language Lab, Nanyang Technological University (NTU)**, working on sound event detection in urban environments (project with ST Engineering).
 
-After graduating, I spent over 5 years within **Vingroup JSC** — starting as an Engineering Resident at **VinAI Research Institute**, then growing through AI Engineer and Middle AI Engineer roles at **Vingroup Big Data Institute** (working on TTS, speaker diarization, voice biometrics, and AI agents), followed by a leadership role as AI Team Lead at **VinSmart Future**. Since June 2026, I have been a **Senior AI Engineer at Vinfast Automotive AI Development Institute - Vingroup JSC**, focused on Conversational Speech Technology for next-generation in-vehicle AI.
+After graduating, I spent over 5 years within **Vingroup JSC** — starting as an Engineering Resident at **VinAI Research Institute**, then growing through AI Engineer and Middle AI Engineer roles at **Vingroup Big Data Institute** (working on TTS, speaker diarization, voice biometrics, and AI agents), followed by a leadership role as AI Team Lead at **VinSmart Future**. Since June 2026, I have been a **Senior AI Engineer at Vinfast Automotive AI Development Institute - Vingroup JSC**, focused on Conversational Speech Technology for next-generation in-vehicle AI. In this role, I am in charge of the TTS core module — building an automated annotation and GRPO training framework and applying diffusion step distillation to improve inference speed, reduce hallucinations, code-switching pronunciation, and natural pausing.
 
 ## Open-Source Contributions
 
