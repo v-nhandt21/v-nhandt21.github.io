@@ -39,6 +39,8 @@ I maintain two widely used Vietnamese NLP packages on PyPI:
 
 ## Selected Awards
 
+- 1st Place (Track A & Track B), VLSP Vietnamese Non-Verbal TTS for Conversational Synthesis (2026)
+- 1st Place, VLSP Speech Quality Assessment (2026)
 - Outstanding Employee of the Year – VinBigdata (2023)
 - 1st Place, VLSP TTS Emotional Speech Synthesis (2022)
 - 1st Prize, Science-A-Thon, 9th Vietnamese Summer School of Science (2022)

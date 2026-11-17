@@ -433,8 +433,10 @@ redirect_from:
 <h2 class="section-title reveal">Publications</h2>
 
 <ul class="pub-list reveal">
+  <li><span class="pub-venue">VLSP 2026</span> Human-in-the-Loop Data Curation and Preference Optimization for Vietnamese Non-Verbal Text-to-Speech <em>(1st Place)</em></li>
+  <li><span class="pub-venue">VLSP 2026</span> Simulation-Guided DSP&ndash;SSL Hybrids for Cross-Lingual Speech Quality Diagnosis <em>(1st Place)</em></li>
   <li><span class="pub-venue">APSIPA ASC 2026</span> ViInstruct: A Large-Scale Vietnamese Dataset for Instruction-Based Text-to-Speech Synthesis</li>
-  <li><span class="pub-venue">APSIPA ASC 2026</span> ViNonverbal: The First Vietnamese Nonverbal Speech Dataset via Scalable Pseudo-Labeling</li>
+  <li><span class="pub-venue">APSIPA ASC 2026</span> ViNonverbal: The First Vietnamese Nonverbal Speech Dataset with Scalable Pseudo-Labeling</li>
   <li><span class="pub-venue">APSIPA ASC 2026</span> Vi-SparkRL: Enhancing Tonal Accuracy and Naturalness in Vietnamese TTS via Multi-Objective Rewards</li>
   <li><span class="pub-venue">MAPR 2025</span> Unified Acoustic Representation Learning for Vietnamese Speech Classification Tasks</li>
   <li><span class="pub-venue">MAPR 2025</span> Analyzing the Correlation and Impact of Speech Evaluation Metrics on Speaker Verification and ASR</li>
@@ -462,6 +464,8 @@ redirect_from:
 <h2 class="section-title reveal">Awards & Recognition</h2>
 
 <ul class="cv-list reveal">
+  <li><span>First Place (Track A &amp; Track B), VLSP Vietnamese Non-Verbal TTS for Conversational Synthesis</span><span class="year">2026</span></li>
+  <li><span>First Place, VLSP Speech Quality Assessment</span><span class="year">2026</span></li>
   <li><span>Outstanding Employee of the Year &ndash; VinBigdata</span><span class="year">2023</span></li>
   <li><span>First Place, VLSP TTS Emotional Speech Synthesis</span><span class="year">2022</span></li>
   <li><span>First Prize, Science-A-Thon, 9th Vietnamese Summer School of Science</span><span class="year">2022</span></li>

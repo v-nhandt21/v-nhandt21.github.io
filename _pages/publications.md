@@ -84,6 +84,11 @@ author_profile: true
   margin-left: auto;
 }
 
+.pub-card-status.is-award {
+  background: #fff4d6;
+  color: #9a6b00;
+}
+
 .pub-card-status.is-withdrawn {
   background: #fdecea;
   color: #b3261e;
@@ -124,6 +129,11 @@ author_profile: true
   font-weight: 600;
   color: #4a9eda;
 }
+
+.pub-card-cert {
+  float: right;
+  color: #b8860b;
+}
 </style>
 
 <div class="pub-grid reveal">
@@ -133,12 +143,12 @@ author_profile: true
         <div class="pub-card-meta">
           {% if post.date %}<span class="pub-card-year">{{ post.date | date: "%Y" }}</span>{% endif %}
           {% if post.venue %}<span class="pub-card-venue">{{ post.venue }}</span>{% endif %}
-          <span class="pub-card-status{% if post.status == 'Withdrawn' %} is-withdrawn{% endif %}">{{ post.status | default: "Published" }}</span>
+          <span class="pub-card-status{% if post.status == 'Withdrawn' %} is-withdrawn{% elsif post.status contains 'Place' %} is-award{% endif %}">{{ post.status | default: "Published" }}</span>
         </div>
         <h2 class="pub-card-title">{{ post.title }}</h2>
         {% if post.citation %}<p class="pub-card-citation">{{ post.citation }}</p>{% endif %}
         {% if post.excerpt %}<p class="pub-card-excerpt">{{ post.excerpt | strip_html | truncate: 160 }}</p>{% endif %}
-        <span class="pub-card-footer">{% if post.paperurl %}<i class="fa fa-file-pdf-o"></i> View paper{% else %}Read more{% endif %} &rarr;</span>
+        <span class="pub-card-footer">{% if post.paperurl %}<i class="fa fa-file-pdf-o"></i> View paper{% else %}Read more{% endif %} &rarr;{% if post.certificate %} <span class="pub-card-cert"><i class="fa fa-certificate"></i> Certificate</span>{% endif %}</span>
       </a>
     {% endif %}
   {% endfor %}
