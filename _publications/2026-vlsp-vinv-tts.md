@@ -14,11 +14,6 @@ citation: '<b>Tri-Nhan Do</b>, Minh-Khang Le, Hoang-Minh Tran, Thanh-Hau Luong, 
 
 <p><strong>🏆 First Place in both Track A (seen speakers) and Track B (zero-shot voice cloning)</strong> of the VLSP 2026 shared task on <em>Vietnamese Non-Verbal Text-to-Speech for Conversational Synthesis</em> (Team SpeechWorld).</p>
 
-| Track | Final score | NV placement accuracy (NVPA) | Rank |
-|---|---|---|---|
-| A: speakers seen in training | 0.824 | 0.880 (66/75) | **1st** |
-| B: zero-shot voice cloning | 0.839 | 0.947 (72/76) | **1st** |
-
 [Download Paper](/files/vlsp-2026-vinv-tts-paper.pdf) · Slides: [English](/files/vlsp-2026-vinv-tts-slides-en.pdf) / [Vietnamese](/files/vlsp-2026-vinv-tts-slides.pdf) · [Interactive Experiment Map (Vietnamese)](/files/vlsp-2026-vinv-tts-overview/)
 
 <p style='text-align: justify;'>Few open text-to-speech (TTS) models can render non-verbal vocalizations (NVs) such as laughter, breathing, sniffing and throat clearing, and fewer still support Vietnamese. We describe our system for the VLSP 2026 ViNV-TTS shared task, which requires each tagged NV to be rendered at its intended position while the voice of the target speaker is preserved. Starting from a multilingual masked generative TTS model, we build a human-in-the-loop pipeline in which listener judgments decide all training signal. Human listening turns a small, noisily tagged corpus into clean single-NV examples, selects the best of the model’s own synthesized speech as additional training data, and supplies preference pairs for Direct Preference Optimization, which we adapt to masked token prediction by estimating sequence likelihoods from masked-token log-probabilities. The pipeline teaches the model all four NV classes from a few dozen clean examples of the rarest ones, and on the public test, preference optimization yields the largest improvement in NV placement at a small cost in speaker similarity.</p>
