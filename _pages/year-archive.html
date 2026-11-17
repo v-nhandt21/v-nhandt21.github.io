@@ -8,12 +8,135 @@ redirect_from:
 ---
 
 {% include base_path %}
-{% capture written_year %}'None'{% endcapture %}
-{% for post in site.posts %}
-  {% capture year %}{{ post.date | date: '%Y' }}{% endcapture %}
-  {% if year != written_year %}
-    <h2 id="{{ year | slugify }}" class="archive__subtitle">{{ year }}</h2>
-    {% capture written_year %}{{ year }}{% endcapture %}
-  {% endif %}
-  {% include archive-single.html %}
-{% endfor %}
+
+<style>
+.story {
+  --st-accent: #2b4c7e; --st-accent-soft: #eef3fb; --st-line: #dfe4ec; --st-card: #fff;
+  --st-border: #e6e9ef; --st-text: #1f2430; --st-muted: #6b7280; --st-chip: #f2f4f8;
+  --st-gold: #b7791f; --st-gold-soft: #fff4d6;
+}
+html[data-theme="dark"] .story {
+  --st-accent: #8fb8ee; --st-accent-soft: #1f2a3b; --st-line: #2c323d; --st-card: #1c1f27;
+  --st-border: #2c313c; --st-text: #e3e7ee; --st-muted: #9aa3b2; --st-chip: #252a34;
+  --st-gold: #f2c46d; --st-gold-soft: #3a3018;
+}
+.story__intro { color: var(--st-muted); margin: -0.4em 0 1.8em; font-size: 0.95rem; }
+
+.story__year { position: relative; padding-left: 34px; margin-bottom: 2.2em; }
+.story__year::before {
+  content: ""; position: absolute; left: 9px; top: 14px; bottom: -2.2em; width: 2px; background: var(--st-line);
+}
+.story__year:last-child::before { bottom: 0; }
+.story__year-label {
+  position: relative; display: inline-block; margin: 0 0 1em; font-size: 1.35rem; font-weight: 800;
+  color: var(--st-accent); letter-spacing: 0.02em; border: 0; padding: 0;
+}
+.story__year-label::before {
+  content: ""; position: absolute; left: -31px; top: 50%; width: 16px; height: 16px; margin-top: -8px;
+  border-radius: 50%; background: var(--st-accent); box-shadow: 0 0 0 4px var(--st-accent-soft);
+}
+.story__year-count { font-size: 0.78rem; font-weight: 600; color: var(--st-muted); margin-left: 8px; letter-spacing: 0; }
+
+.story__entry { position: relative; margin-bottom: 14px; }
+.story__entry::before {
+  content: ""; position: absolute; left: -29px; top: 22px; width: 10px; height: 10px; border-radius: 50%;
+  background: var(--st-card); border: 2px solid var(--st-accent);
+}
+
+.story-card {
+  display: flex; background: var(--st-card); border: 1px solid var(--st-border); border-radius: 10px;
+  overflow: hidden; text-decoration: none !important; color: var(--st-text) !important;
+  transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease;
+}
+.story-card:hover { transform: translateY(-2px); box-shadow: 0 8px 22px rgba(20, 30, 50, 0.10); border-color: var(--st-accent); }
+.story-card__media { flex: 0 0 42%; min-height: 220px; background: var(--st-chip) center / cover no-repeat; }
+.story-card__body { flex: 1; min-width: 0; padding: 18px 22px; display: flex; flex-direction: column; gap: 8px; }
+.story-card__date { font-size: 0.74rem; font-weight: 700; color: var(--st-muted); text-transform: uppercase; letter-spacing: 0.06em; }
+.story-card__title { margin: 0; font-size: 1.12rem; line-height: 1.35; font-weight: 700; color: var(--st-text); }
+.story-card--featured .story-card__title { font-size: 1.3rem; }
+.story-card__excerpt { margin: 0; font-size: 0.9rem; line-height: 1.55; color: var(--st-muted); }
+.story-card__tags { display: flex; flex-wrap: wrap; gap: 6px; }
+.story-card__tag { font-size: 0.7rem; font-weight: 700; color: var(--st-accent); background: var(--st-accent-soft); border-radius: 999px; padding: 2px 9px; }
+.story-card__more { margin-top: auto; padding-top: 4px; font-size: 0.82rem; font-weight: 700; color: var(--st-accent); }
+.story-card--featured { border-top: 3px solid var(--st-gold); }
+.story-card--featured .story-card__date { color: var(--st-gold); }
+
+.story__compact { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 10px; margin-bottom: 14px; }
+.story-tile {
+  display: flex; flex-direction: column; gap: 4px; padding: 12px 14px; border-radius: 8px;
+  background: var(--st-card); border: 1px dashed var(--st-border); text-decoration: none !important;
+  color: var(--st-text) !important; transition: border-color 0.15s, background 0.15s;
+}
+.story-tile:hover { border-color: var(--st-accent); border-style: solid; background: var(--st-accent-soft); }
+.story-tile__title { font-size: 0.9rem; font-weight: 700; line-height: 1.35; }
+.story-tile__date { font-size: 0.72rem; color: var(--st-muted); }
+
+@media (max-width: 700px) {
+  .story-card { flex-direction: column; }
+  .story-card__media { flex-basis: auto; min-height: 0; aspect-ratio: 16 / 9; }
+  .story__year { padding-left: 26px; }
+  .story__year::before { left: 6px; }
+  .story__year-label::before { left: -26px; }
+  .story__entry::before { left: -24px; }
+}
+</style>
+
+{%- assign skip_tags = "cool posts,category1,category2" | split: "," -%}
+{%- assign years = site.posts | group_by_exp: "post", "post.date | date: '%Y'" -%}
+
+<div class="story">
+  <p class="story__intro">Milestones, competitions and memories along the way.</p>
+
+  {%- for year in years %}
+  {%- assign compact = "" | split: "" -%}
+  <section class="story__year reveal" id="{{ year.name }}">
+    <h2 class="story__year-label">{{ year.name }}<span class="story__year-count">{{ year.items | size }} {% if year.items.size == 1 %}story{% else %}stories{% endif %}</span></h2>
+
+    {%- for post in year.items %}
+    {%- assign body = post.content | strip_html | strip -%}
+    {%- if post.cover %}
+    <div class="story__entry">
+      <a class="story-card story-card--featured lift-hover" href="{{ base_path }}{{ post.url }}">
+        <div class="story-card__media" style="background-image: url('{{ base_path }}{{ post.cover }}');" role="img" aria-label="{{ post.title | escape }}"></div>
+        <div class="story-card__body">
+          <span class="story-card__date">{{ post.date | date: "%B %-d, %Y" }}</span>
+          <h3 class="story-card__title">{{ post.title }}</h3>
+          {%- if post.excerpt %}<p class="story-card__excerpt">{{ post.excerpt | strip_html | strip }}</p>{% endif %}
+          {%- if post.tags.size > 0 %}
+          <div class="story-card__tags">{% for t in post.tags %}{% unless skip_tags contains t %}<span class="story-card__tag">{{ t }}</span>{% endunless %}{% endfor %}</div>
+          {%- endif %}
+          <span class="story-card__more">Read story &rarr;</span>
+        </div>
+      </a>
+    </div>
+    {%- elsif body != "" %}
+    <div class="story__entry">
+      <a class="story-card lift-hover" href="{{ base_path }}{{ post.url }}">
+        <div class="story-card__body">
+          <span class="story-card__date">{{ post.date | date: "%B %-d, %Y" }}</span>
+          <h3 class="story-card__title">{{ post.title }}</h3>
+          {%- assign ex = post.excerpt | strip_html | strip -%}
+          {%- if ex != "" %}<p class="story-card__excerpt">{{ ex | truncate: 180 }}</p>{% endif %}
+        </div>
+      </a>
+    </div>
+    {%- else %}
+    {%- assign compact = compact | push: post -%}
+    {%- endif %}
+    {%- endfor %}
+
+    {%- if compact.size > 0 %}
+    <div class="story__entry">
+      <div class="story__compact">
+        {%- for post in compact %}
+        <a class="story-tile" href="{{ base_path }}{{ post.url }}">
+          <span class="story-tile__title">{{ post.title }}</span>
+          <span class="story-tile__date">{{ post.date | date: "%b %Y" }}</span>
+        </a>
+        {%- endfor %}
+      </div>
+    </div>
+    {%- endif %}
+  </section>
+  {%- endfor %}
+</div>
