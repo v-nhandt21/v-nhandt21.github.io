@@ -20,7 +20,7 @@ citation: '<b>Tri-Nhan Do</b>, Long-Hai Tran, Minh-Toan Tran'
 
 ## Slides
 
-{% include slide-tabs.html en_dir="/images/publications/vlsp-2026-sqa-slides-en" en_count=17 vi_dir="/images/publications/vlsp-2026-sqa-slides" vi_count=18 title="SQA slides" %}
+{% include slide-tabs.html en_dir="/images/publications/vlsp-2026-sqa-slides-en" en_count=18 vi_dir="/images/publications/vlsp-2026-sqa-slides" vi_count=18 title="SQA slides" %}
 
 ## Paper
 
