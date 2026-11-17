@@ -10,11 +10,26 @@ certificate: '/images/publications/vlsp-2026-vinv-tts-track-a-certificate.jpg'
 excerpt: 'Few open text-to-speech (TTS) models can render non-verbal vocalizations (NVs) such as laughter, breathing, sniffing and throat clearing, and fewer still support Vietnamese. We describe our system for the VLSP 2026 ViNV-TTS shared task, which requires each tagged NV to be rendered at its intended position while the voice of the target speaker is preserved. Starting from a multilingual masked generative TTS model, we build a human-in-the-loop pipeline in which listener judgments decide all training signal. Human listening turns a small, noisily tagged corpus into clean single-NV examples, selects the best of the model’s own synthesized speech as additional training data, and supplies preference pairs for Direct Preference Optimization, which we adapt to masked token prediction by estimating sequence likelihoods from masked-token log-probabilities. The pipeline teaches the model all four NV classes from a few dozen clean examples of the rarest ones, and on the public test, preference optimization yields the largest improvement in NV placement at a small cost in speaker similarity.'
 paperurl: '/files/vlsp-2026-vinv-tts-paper.pdf'
 citation: '<b>Tri-Nhan Do</b>, Minh-Khang Le, Hoang-Minh Tran, Thanh-Hau Luong, Long-Hai Tran, Viet-Lam Phung'
+links:
+  - label: Paper
+    icon: fas fa-file-pdf
+    url: /files/vlsp-2026-vinv-tts-paper.pdf
+  - label: Slides
+    icon: fas fa-chalkboard-teacher
+    variants:
+      - label: EN
+        url: /files/vlsp-2026-vinv-tts-slides-en.pdf
+      - label: VI
+        url: /files/vlsp-2026-vinv-tts-slides.pdf
+  - label: Experiment map
+    icon: fas fa-project-diagram
+    url: /files/vlsp-2026-vinv-tts-overview/
+    note: VI
 ---
 
 <p><strong>🏆 First Place in both Track A (seen speakers) and Track B (zero-shot voice cloning)</strong> of the VLSP 2026 shared task on <em>Vietnamese Non-Verbal Text-to-Speech for Conversational Synthesis</em> (Team SpeechWorld).</p>
 
-[Download Paper](/files/vlsp-2026-vinv-tts-paper.pdf) · Slides: [English](/files/vlsp-2026-vinv-tts-slides-en.pdf) / [Vietnamese](/files/vlsp-2026-vinv-tts-slides.pdf) · [Interactive Experiment Map (Vietnamese)](/files/vlsp-2026-vinv-tts-overview/)
+{% include pub-links.html %}
 
 <p style='text-align: justify;'>Few open text-to-speech (TTS) models can render non-verbal vocalizations (NVs) such as laughter, breathing, sniffing and throat clearing, and fewer still support Vietnamese. We describe our system for the VLSP 2026 ViNV-TTS shared task, which requires each tagged NV to be rendered at its intended position while the voice of the target speaker is preserved. Starting from a multilingual masked generative TTS model, we build a human-in-the-loop pipeline in which listener judgments decide all training signal. Human listening turns a small, noisily tagged corpus into clean single-NV examples, selects the best of the model’s own synthesized speech as additional training data, and supplies preference pairs for Direct Preference Optimization, which we adapt to masked token prediction by estimating sequence likelihoods from masked-token log-probabilities. The pipeline teaches the model all four NV classes from a few dozen clean examples of the rarest ones, and on the public test, preference optimization yields the largest improvement in NV placement at a small cost in speaker similarity.</p>
 

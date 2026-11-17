@@ -1,0 +1,60 @@
+{% comment %}
+  Pill-style resource links for a publication, read from front matter:
+    links:
+      - label: Paper
+        icon: fas fa-file-pdf
+        url: /files/paper.pdf
+      - label: Slides
+        icon: fas fa-chalkboard-teacher
+        variants:              # optional: segmented pill, e.g. language versions
+          - label: EN
+            url: /files/slides-en.pdf
+          - label: VI
+            url: /files/slides-vi.pdf
+      - label: Experiment map
+        icon: fas fa-project-diagram
+        url: /files/map/
+        note: VI               # optional small suffix
+  Usage: {% include pub-links.html %}
+{% endcomment -%}
+{%- if page.links -%}
+<style>
+.pub-links { display: flex; flex-wrap: wrap; gap: 8px; margin: 0.4em 0 1.4em; }
+.pub-link, .pub-link-group {
+  display: inline-flex; align-items: stretch; border: 1px solid #d5dbe5; border-radius: 999px;
+  background: #fff; font-size: 0.82rem; font-weight: 600; line-height: 1; overflow: hidden;
+}
+.pub-link, .pub-link-group__part {
+  color: #2b4c7e !important; text-decoration: none !important; padding: 7px 14px;
+  display: inline-flex; align-items: center; gap: 7px; transition: background 0.15s, color 0.15s;
+}
+.pub-link:hover, .pub-link-group__part:hover { background: #2b4c7e; color: #fff !important; }
+.pub-link-group:hover { border-color: #2b4c7e; }
+.pub-link:hover { border-color: #2b4c7e; }
+.pub-link i, .pub-link-group__label i { font-size: 0.9em; opacity: 0.85; }
+.pub-link small { font-weight: 600; font-size: 0.7rem; color: #7a8699; letter-spacing: 0.03em; }
+.pub-link:hover small { color: rgba(255,255,255,0.8); }
+.pub-link-group__label { display: inline-flex; align-items: center; gap: 7px; padding: 7px 10px 7px 14px; color: #2b4c7e; }
+.pub-link-group__part { padding: 7px 11px; border-left: 1px solid #d5dbe5; font-size: 0.74rem; letter-spacing: 0.04em; }
+html[data-theme="dark"] .pub-link, html[data-theme="dark"] .pub-link-group { background: #1c1f27; border-color: #343a46; }
+html[data-theme="dark"] .pub-link, html[data-theme="dark"] .pub-link-group__part,
+html[data-theme="dark"] .pub-link-group__label { color: #9cc4ee !important; }
+html[data-theme="dark"] .pub-link-group__part { border-left-color: #343a46; }
+html[data-theme="dark"] .pub-link:hover, html[data-theme="dark"] .pub-link-group__part:hover { background: #9cc4ee; color: #14161c !important; }
+html[data-theme="dark"] .pub-link:hover small { color: rgba(20,22,28,0.7); }
+</style>
+<div class="pub-links">
+  {%- for l in page.links %}
+  {%- if l.variants %}
+  <span class="pub-link-group">
+    <span class="pub-link-group__label">{% if l.icon %}<i class="{{ l.icon }}" aria-hidden="true"></i>{% endif %}{{ l.label }}</span>
+    {%- for v in l.variants %}
+    <a class="pub-link-group__part" href="{{ v.url }}" target="_blank" rel="noopener" aria-label="{{ l.label }} ({{ v.label }})">{{ v.label }}</a>
+    {%- endfor %}
+  </span>
+  {%- else %}
+  <a class="pub-link" href="{{ l.url }}" target="_blank" rel="noopener">{% if l.icon %}<i class="{{ l.icon }}" aria-hidden="true"></i>{% endif %}{{ l.label }}{% if l.note %}<small>{{ l.note }}</small>{% endif %}</a>
+  {%- endif %}
+  {%- endfor %}
+</div>
+{%- endif -%}

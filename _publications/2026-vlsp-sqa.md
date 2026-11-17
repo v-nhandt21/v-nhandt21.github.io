@@ -10,11 +10,22 @@ certificate: '/images/publications/vlsp-2026-sqa-certificate.jpg'
 excerpt: 'The VLSP 2026 Speech Quality Assessment task asks for a quality score and the time-localised detection of noise, distortion and unnatural pauses. We propose a DSP–SSL hybrid that concatenates ten signal-processing frame features with a multilingual self-supervised encoder and is trained on QualiSpeech plus a Vietnamese degradation simulator. An ensemble of four w2v-BERT 2.0 hybrids and a WavLM-based model reaches a final score of 0.617 on the private test. The released labels reveal two shifts: a domain shift in language and fault characteristics, with short and often silent distortion events, and a shift in tag distribution, with unnatural pauses in only 2.6% of the private files against 34–44% in QualiSpeech.'
 paperurl: '/files/vlsp-2026-sqa-paper.pdf'
 citation: '<b>Tri-Nhan Do</b>, Long-Hai Tran, Minh-Toan Tran'
+links:
+  - label: Paper
+    icon: fas fa-file-pdf
+    url: /files/vlsp-2026-sqa-paper.pdf
+  - label: Slides
+    icon: fas fa-chalkboard-teacher
+    variants:
+      - label: EN
+        url: /files/vlsp-2026-sqa-slides-en.pdf
+      - label: VI
+        url: /files/vlsp-2026-sqa-slides.pdf
 ---
 
 <p><strong>🏆 First Place</strong> in the VLSP 2026 shared task on <em>Speech Quality Assessment</em> (Team SpeechWorld).</p>
 
-[Download Paper](/files/vlsp-2026-sqa-paper.pdf) · Slides: [English](/files/vlsp-2026-sqa-slides-en.pdf) / [Vietnamese](/files/vlsp-2026-sqa-slides.pdf)
+{% include pub-links.html %}
 
 <p style='text-align: justify;'>The VLSP 2026 Speech Quality Assessment task asks for a quality score and the time-localised detection of noise, distortion and unnatural pauses. We propose a DSP–SSL hybrid that concatenates ten signal-processing frame features with a multilingual self-supervised encoder and is trained on QualiSpeech plus a Vietnamese degradation simulator. An ensemble of four w2v-BERT 2.0 hybrids and a WavLM-based model reaches a final score of 0.617 on the private test. The released labels reveal two shifts: a domain shift in language and fault characteristics, with short and often silent distortion events, and a shift in tag distribution, with unnatural pauses in only 2.6% of the private files against 34–44% in QualiSpeech.</p>
 
