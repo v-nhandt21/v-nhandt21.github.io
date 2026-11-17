@@ -19,13 +19,13 @@ citation: '<b>Tri-Nhan Do</b>, Minh-Khang Le, Hoang-Minh Tran, Thanh-Hau Luong, 
 | A: speakers seen in training | 0.824 | 0.880 (66/75) | **1st** |
 | B: zero-shot voice cloning | 0.839 | 0.947 (72/76) | **1st** |
 
-[Download Paper](/files/vlsp-2026-vinv-tts-paper.pdf) · [Slides (Vietnamese)](/files/vlsp-2026-vinv-tts-slides.pdf) · [Interactive Experiment Map (Vietnamese)](/files/vlsp-2026-vinv-tts-overview/)
+[Download Paper](/files/vlsp-2026-vinv-tts-paper.pdf) · Slides: [English](/files/vlsp-2026-vinv-tts-slides-en.pdf) / [Vietnamese](/files/vlsp-2026-vinv-tts-slides.pdf) · [Interactive Experiment Map (Vietnamese)](/files/vlsp-2026-vinv-tts-overview/)
 
 <p style='text-align: justify;'>Few open text-to-speech (TTS) models can render non-verbal vocalizations (NVs) such as laughter, breathing, sniffing and throat clearing, and fewer still support Vietnamese. We describe our system for the VLSP 2026 ViNV-TTS shared task, which requires each tagged NV to be rendered at its intended position while the voice of the target speaker is preserved. Starting from a multilingual masked generative TTS model, we build a human-in-the-loop pipeline in which listener judgments decide all training signal. Human listening turns a small, noisily tagged corpus into clean single-NV examples, selects the best of the model’s own synthesized speech as additional training data, and supplies preference pairs for Direct Preference Optimization, which we adapt to masked token prediction by estimating sequence likelihoods from masked-token log-probabilities. The pipeline teaches the model all four NV classes from a few dozen clean examples of the rarest ones, and on the public test, preference optimization yields the largest improvement in NV placement at a small cost in speaker similarity.</p>
 
-## Slides (Vietnamese)
+## Slides
 
-{% include slide-carousel.html dir="/images/publications/vlsp-2026-vinv-tts-slides" count=14 title="ViNV-TTS slides" %}
+{% include slide-tabs.html en_dir="/images/publications/vlsp-2026-vinv-tts-slides-en" en_count=14 vi_dir="/images/publications/vlsp-2026-vinv-tts-slides" vi_count=14 title="ViNV-TTS slides" %}
 
 ## System Development
 

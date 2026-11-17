@@ -1,0 +1,36 @@
+{% comment %}
+  English / Vietnamese switcher around two slide carousels.
+  Usage: {% include slide-tabs.html en_dir="/images/.../foo-slides-en" en_count=14 vi_dir="/images/.../foo-slides" vi_count=14 title="Foo slides" %}
+{% endcomment -%}
+<style>
+.slide-tabs__bar { display: flex; gap: 6px; margin: 0.5em 0 0; }
+.slide-tabs__bar button {
+  border: 1px solid #c9ced6; background: #fff; color: #555; border-radius: 4px;
+  padding: 3px 14px; font-size: 0.85rem; font-weight: 700; cursor: pointer;
+}
+.slide-tabs__bar button[aria-selected="true"] { background: #2b4c7e; border-color: #2b4c7e; color: #fff; }
+</style>
+<div class="slide-tabs">
+  <div class="slide-tabs__bar" role="tablist">
+    <button type="button" role="tab" aria-selected="true" data-lang="en">English</button>
+    <button type="button" role="tab" aria-selected="false" data-lang="vi">Tiếng Việt</button>
+  </div>
+  <div class="slide-tabs__panel" data-lang="en">
+    {% include slide-carousel.html dir=include.en_dir count=include.en_count title=include.title %}
+  </div>
+  <div class="slide-tabs__panel" data-lang="vi" hidden>
+    {% include slide-carousel.html dir=include.vi_dir count=include.vi_count title=include.title %}
+  </div>
+</div>
+<script>
+(function () {
+  var root = document.currentScript.previousElementSibling;
+  var tabs = root.querySelectorAll('.slide-tabs__bar button');
+  tabs.forEach(function (t) {
+    t.addEventListener('click', function () {
+      tabs.forEach(function (o) { o.setAttribute('aria-selected', o === t ? 'true' : 'false'); });
+      root.querySelectorAll('.slide-tabs__panel').forEach(function (p) { p.hidden = p.dataset.lang !== t.dataset.lang; });
+    });
+  });
+})();
+</script>

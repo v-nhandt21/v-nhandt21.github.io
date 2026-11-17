@@ -14,13 +14,13 @@ citation: '<b>Tri-Nhan Do</b>, Long-Hai Tran, Minh-Toan Tran'
 
 <p><strong>🏆 First Place</strong> in the VLSP 2026 shared task on <em>Speech Quality Assessment</em> (Team SpeechWorld).</p>
 
-[Download Paper](/files/vlsp-2026-sqa-paper.pdf) · [Slides (Vietnamese)](/files/vlsp-2026-sqa-slides.pdf)
+[Download Paper](/files/vlsp-2026-sqa-paper.pdf) · Slides: [English](/files/vlsp-2026-sqa-slides-en.pdf) / [Vietnamese](/files/vlsp-2026-sqa-slides.pdf)
 
 <p style='text-align: justify;'>The VLSP 2026 Speech Quality Assessment task asks for a quality score and the time-localised detection of noise, distortion and unnatural pauses. We propose a DSP–SSL hybrid that concatenates ten signal-processing frame features with a multilingual self-supervised encoder and is trained on QualiSpeech plus a Vietnamese degradation simulator. An ensemble of four w2v-BERT 2.0 hybrids and a WavLM-based model reaches a final score of 0.617 on the private test. The released labels reveal two shifts: a domain shift in language and fault characteristics, with short and often silent distortion events, and a shift in tag distribution, with unnatural pauses in only 2.6% of the private files against 34–44% in QualiSpeech.</p>
 
-## Slides (Vietnamese)
+## Slides
 
-{% include slide-carousel.html dir="/images/publications/vlsp-2026-sqa-slides" count=18 title="SQA slides" %}
+{% include slide-tabs.html en_dir="/images/publications/vlsp-2026-sqa-slides-en" en_count=17 vi_dir="/images/publications/vlsp-2026-sqa-slides" vi_count=18 title="SQA slides" %}
 
 ## Paper
 
