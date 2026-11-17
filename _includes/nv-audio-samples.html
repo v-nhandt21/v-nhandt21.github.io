@@ -1,0 +1,155 @@
+{% comment %}
+  Card grid of non-verbal TTS audio samples with tag filters and a compact player.
+  Usage: {% include nv-audio-samples.html data=site.data.vinv_samples %}
+{% endcomment -%}
+{%- assign d = include.data -%}
+<style>
+.nvs {
+  --nvs-card: #fff; --nvs-border: #e6e8ec; --nvs-text: #2a2e35; --nvs-muted: #6b7280;
+  --nvs-track: #e8ebf0; --nvs-chip: #f3f4f6;
+  --c-laughter: #d9730d; --c-breathing: #1d84b5; --c-sniff: #4b8f16; --c-throatclearing: #c2407a;
+  --c-ref: #2b4c7e;
+  margin: 1em 0 1.5em; font-size: 0.92rem;
+}
+html[data-theme="dark"] .nvs {
+  --nvs-card: #1c1f27; --nvs-border: #2c313c; --nvs-text: #dfe3ea; --nvs-muted: #9aa3b2;
+  --nvs-track: #2f3540; --nvs-chip: #252a34;
+  --c-laughter: #ffa94d; --c-breathing: #5cc3f0; --c-sniff: #9bd65a; --c-throatclearing: #f27ab0;
+  --c-ref: #8fb8ee;
+}
+.nvs__refs { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 10px; margin-bottom: 14px; }
+.nvs__filters { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 12px; }
+.nvs__filter {
+  display: inline-flex; align-items: center; gap: 6px; border: 1px solid var(--nvs-border);
+  background: var(--nvs-chip); color: var(--nvs-text); border-radius: 999px; padding: 3px 12px;
+  font-size: 0.8rem; font-weight: 600; cursor: pointer; line-height: 1.6;
+}
+.nvs__filter i { width: 8px; height: 8px; border-radius: 50%; background: var(--c); display: inline-block; }
+.nvs__filter small { color: var(--nvs-muted); font-weight: 500; }
+.nvs__filter[aria-pressed="true"] { background: var(--c, var(--c-ref)); border-color: var(--c, var(--c-ref)); color: #fff; }
+.nvs__filter[aria-pressed="true"] i { background: #fff; }
+.nvs__filter[aria-pressed="true"] small { color: rgba(255,255,255,0.85); }
+html[data-theme="dark"] .nvs__filter[aria-pressed="true"] { color: #14161c; }
+html[data-theme="dark"] .nvs__filter[aria-pressed="true"] small { color: rgba(20,22,28,0.75); }
+html[data-theme="dark"] .nvs__filter[aria-pressed="true"] i { background: #14161c; }
+.nvs__grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+@media (max-width: 640px) { .nvs__grid { grid-template-columns: minmax(0, 1fr); } }
+.nvs__card {
+  display: flex; flex-direction: column; gap: 10px; background: var(--nvs-card); color: var(--nvs-text);
+  border: 1px solid var(--nvs-border); border-left: 4px solid var(--c); border-radius: 8px; padding: 12px 14px;
+}
+.nvs__card[hidden] { display: none; }
+.nvs__meta { display: flex; align-items: center; gap: 8px; font-size: 0.74rem; font-weight: 700; }
+.nvs__tag { color: var(--c); text-transform: uppercase; letter-spacing: 0.04em; }
+.nvs__voice { margin-left: auto; color: var(--nvs-muted); font-weight: 600; background: var(--nvs-chip); border-radius: 3px; padding: 1px 7px; }
+.nvs__text { margin: 0; line-height: 1.55; flex: 1; }
+.nvs__pill {
+  display: inline-block; font-size: 0.74rem; font-weight: 700; color: var(--c); border: 1px solid var(--c);
+  border-radius: 4px; padding: 0 5px; margin: 0 1px; line-height: 1.45; white-space: nowrap;
+}
+.nvs__player { display: flex; align-items: center; gap: 10px; }
+.nvs__btn {
+  flex: 0 0 34px; width: 34px; height: 34px; border-radius: 50%; border: 0; background: var(--c); color: #fff;
+  display: inline-flex; align-items: center; justify-content: center; cursor: pointer; padding: 0;
+}
+html[data-theme="dark"] .nvs__btn { color: #14161c; }
+.nvs__btn svg { width: 14px; height: 14px; fill: currentColor; }
+.nvs__btn .nvs__pause { display: none; }
+.nvs__player.is-playing .nvs__play { display: none; }
+.nvs__player.is-playing .nvs__pause { display: block; }
+.nvs__bar { flex: 1; height: 6px; background: var(--nvs-track); border-radius: 3px; cursor: pointer; position: relative; }
+.nvs__fill { position: absolute; inset: 0 auto 0 0; width: 0; background: var(--c); border-radius: 3px; }
+.nvs__time { font-size: 0.74rem; color: var(--nvs-muted); font-variant-numeric: tabular-nums; min-width: 34px; text-align: right; }
+.nvs__ref { --c: var(--c-ref); border-left-width: 4px; }
+.nvs__ref .nvs__text { font-weight: 600; }
+.nvs__ref .nvs__text small { display: block; font-weight: 500; color: var(--nvs-muted); }
+</style>
+
+{%- capture play_icon -%}<svg class="nvs__play" viewBox="0 0 16 16" aria-hidden="true"><path d="M4 2.5v11l9-5.5z"/></svg><svg class="nvs__pause" viewBox="0 0 16 16" aria-hidden="true"><path d="M3.5 2.5h3v11h-3zM9.5 2.5h3v11h-3z"/></svg>{%- endcapture -%}
+
+<div class="nvs">
+  <div class="nvs__refs">
+    {%- for r in d.references %}
+    <div class="nvs__card nvs__ref">
+      <p class="nvs__text">Reference voice · {{ r.voice | capitalize }}<small>{{ r.label }}</small></p>
+      <div class="nvs__player" data-src="{{ d.base }}/{{ r.file }}">
+        <button type="button" class="nvs__btn" aria-label="Play reference voice, {{ r.voice }}">{{ play_icon }}</button>
+        <div class="nvs__bar" role="presentation"><div class="nvs__fill"></div></div>
+        <span class="nvs__time">0:00</span>
+      </div>
+    </div>
+    {%- endfor %}
+  </div>
+
+  <div class="nvs__filters" role="group" aria-label="Filter samples by tag">
+    <button type="button" class="nvs__filter" data-filter="all" aria-pressed="true">All <small>{{ d.samples | size }}</small></button>
+    {%- for t in d.tags %}
+    {%- assign n = d.samples | where: "tag", t.id | size %}
+    <button type="button" class="nvs__filter" data-filter="{{ t.id }}" aria-pressed="false" style="--c: var(--c-{{ t.id }});"><i></i>{{ t.label }} <small>{{ n }}</small></button>
+    {%- endfor %}
+  </div>
+
+  <div class="nvs__grid">
+    {%- for s in d.samples %}
+    {%- assign t = d.tags | where: "id", s.tag | first %}
+    {%- capture pill %}<span class="nvs__pill">[{{ s.tag }}]</span>{% endcapture %}
+    {%- capture raw_tag %}[{{ s.tag }}]{% endcapture %}
+    <div class="nvs__card" data-tag="{{ s.tag }}" style="--c: var(--c-{{ s.tag }});">
+      <div class="nvs__meta"><span class="nvs__tag">{{ t.label }}</span><span class="nvs__voice">{{ s.voice }} voice</span></div>
+      <p class="nvs__text" lang="vi">{{ s.text | escape | replace: raw_tag, pill }}</p>
+      <div class="nvs__player" data-src="{{ d.base }}/{{ s.file }}">
+        <button type="button" class="nvs__btn" aria-label="Play {{ t.label | downcase }} sample, {{ s.voice }} voice">{{ play_icon }}</button>
+        <div class="nvs__bar" role="presentation"><div class="nvs__fill"></div></div>
+        <span class="nvs__time">0:00</span>
+      </div>
+    </div>
+    {%- endfor %}
+  </div>
+</div>
+<script>
+(function () {
+  var root = document.currentScript.previousElementSibling;
+  var current = null;
+  function fmt(t) { t = Math.max(0, Math.floor(t || 0)); return Math.floor(t / 60) + ':' + ('0' + t % 60).slice(-2); }
+  root.querySelectorAll('.nvs__player').forEach(function (p) {
+    var audio = null, btn = p.querySelector('.nvs__btn'), fill = p.querySelector('.nvs__fill'),
+        time = p.querySelector('.nvs__time'), bar = p.querySelector('.nvs__bar');
+    function ensure() {
+      if (audio) return audio;
+      audio = new Audio(p.dataset.src);
+      audio.preload = 'metadata';
+      audio.addEventListener('loadedmetadata', function () { time.textContent = fmt(audio.duration); });
+      audio.addEventListener('timeupdate', function () {
+        if (audio.duration) fill.style.width = (audio.currentTime / audio.duration * 100) + '%';
+        time.textContent = fmt(audio.currentTime);
+      });
+      audio.addEventListener('play', function () { p.classList.add('is-playing'); });
+      audio.addEventListener('pause', function () { p.classList.remove('is-playing'); });
+      audio.addEventListener('ended', function () { fill.style.width = '0%'; time.textContent = fmt(audio.duration); });
+      return audio;
+    }
+    btn.addEventListener('click', function () {
+      var a = ensure();
+      if (current && current !== a) current.pause();
+      current = a;
+      if (a.paused) a.play(); else a.pause();
+    });
+    bar.addEventListener('click', function (e) {
+      var a = ensure(), r = bar.getBoundingClientRect();
+      var seek = function () { a.currentTime = (e.clientX - r.left) / r.width * a.duration; };
+      if (a.duration) seek(); else a.addEventListener('loadedmetadata', seek, { once: true });
+      if (current && current !== a) current.pause();
+      current = a; a.play();
+    });
+  });
+  var filters = root.querySelectorAll('.nvs__filter');
+  filters.forEach(function (f) {
+    f.addEventListener('click', function () {
+      filters.forEach(function (o) { o.setAttribute('aria-pressed', o === f ? 'true' : 'false'); });
+      root.querySelectorAll('.nvs__grid .nvs__card').forEach(function (c) {
+        c.hidden = f.dataset.filter !== 'all' && c.dataset.tag !== f.dataset.filter;
+      });
+    });
+  });
+})();
+</script>
