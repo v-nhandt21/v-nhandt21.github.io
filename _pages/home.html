@@ -384,10 +384,10 @@ author_profile: true
   <img src="/images/resume/concise-2.png?v={{ site.time | date: '%s' }}" alt="Resume, page 2" loading="lazy">
   <div class="resume-preview__info">
     <h3>Curriculum Vitae</h3>
-    <p>Two-page résumé, updated {{ site.time | date: "%B %Y" }}. Click a page to enlarge.</p>
-    <a class="is-primary" href="/latex/CV_short.pdf" target="_blank" rel="noopener"><i class="fas fa-download" aria-hidden="true"></i>Download CV (PDF)</a>
-    <a href="/latex/CV_long.pdf" target="_blank" rel="noopener"><i class="fas fa-file-alt" aria-hidden="true"></i>Full CV (PDF)</a>
-    <a href="/cv/"><i class="fas fa-user" aria-hidden="true"></i>View online</a>
+    <p>Two-page résumé, updated {{ site.time | date: "%B %Y" }}.</p>
+    <a class="is-primary" href="/latex/CV_short.pdf" download="DoTriNhan_CV.pdf"><i class="fas fa-download" aria-hidden="true"></i>Download CV (PDF)</a>
+    <a href="/latex/CV_short.pdf" target="_blank" rel="noopener"><i class="fas fa-external-link-alt" aria-hidden="true"></i>Open in new tab</a>
+    <a href="/latex/CV_short.pdf" onclick="var i=document.querySelector('.resume-preview img'); if(i){i.click(); return false;}"><i class="fas fa-search-plus" aria-hidden="true"></i>Preview pages</a>
   </div>
 </div>
 
