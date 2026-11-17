@@ -228,6 +228,7 @@ defaults:
     values:
       layout: single
       author_profile: true
+      wide: true
       share: true
       comments: true
   # _portfolio

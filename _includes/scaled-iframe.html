@@ -1,0 +1,27 @@
+{% comment %}
+  Shows a page in an iframe at its desktop design width, scaled down to fit the column,
+  so the whole layout is visible. Below `min_fit` px of column width it falls back to a
+  normal responsive iframe (scaling would make the text unreadable on phones).
+  Usage: {% include scaled-iframe.html src="/files/foo/" title="Foo" width=1200 height=900 bg="#07060f" %}
+{% endcomment -%}
+<div class="scaled-iframe" data-width="{{ include.width | default: 1200 }}" data-height="{{ include.height | default: 900 }}" data-min-fit="{{ include.min_fit | default: 640 }}" style="position: relative; width: 100%; overflow: hidden; border: 1px solid #2a2052; border-radius: 6px; background: {{ include.bg | default: '#fff' }};">
+  <iframe src="{{ include.src }}" title="{{ include.title }}" loading="lazy" style="display: block; border: 0; width: 100%; height: {{ include.height | default: 900 }}px; transform-origin: 0 0;"></iframe>
+</div>
+<script>
+(function () {
+  var box = document.currentScript.previousElementSibling, frame = box.querySelector('iframe');
+  var W = Number(box.dataset.width), H = Number(box.dataset.height), MIN = Number(box.dataset.minFit);
+  function fit() {
+    var cw = box.clientWidth;
+    if (cw < MIN || cw >= W) {
+      frame.style.width = '100%'; frame.style.height = H + 'px'; frame.style.transform = 'none';
+    } else {
+      var s = cw / W;
+      frame.style.width = W + 'px'; frame.style.height = (H / s) + 'px'; frame.style.transform = 'scale(' + s + ')';
+    }
+    box.style.height = H + 'px';
+  }
+  fit();
+  window.addEventListener('resize', fit);
+})();
+</script>

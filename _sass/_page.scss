@@ -34,6 +34,14 @@
   }
 }
 
+/* Wide pages (front matter `wide: true`): drop the empty right-hand gutter so
+   long-form content (papers, slides, embeds) uses the full width beside the sidebar. */
+.page.page--wide {
+  @include breakpoint($large) {
+    padding-right: 0;
+  }
+}
+
 .page__title {
   margin-top: 0;
   line-height: 1;

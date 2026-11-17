@@ -31,7 +31,7 @@ citation: '<b>Tri-Nhan Do</b>, Minh-Khang Le, Hoang-Minh Tran, Thanh-Hau Luong, 
 
 <p>The full experiment notebook (in Vietnamese): data flow per tag, listening rounds, per-checkpoint results, model architecture and the NVPA probe, with playable samples. <a href="/files/vlsp-2026-vinv-tts-overview/" target="_blank">Open full screen &#8599;</a></p>
 
-<iframe src="/files/vlsp-2026-vinv-tts-overview/" title="ViNV-TTS interactive experiment map" loading="lazy" style="width: 100%; height: 900px; border: 1px solid #2a2052; border-radius: 6px; background: #07060f;"></iframe>
+{% include scaled-iframe.html src="/files/vlsp-2026-vinv-tts-overview/" title="ViNV-TTS interactive experiment map" width=1200 height=900 bg="#07060f" %}
 
 ## Audio Samples
 
