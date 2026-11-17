@@ -1,0 +1,62 @@
+{% comment %}
+  Horizontal slide viewer for slide decks exported as images.
+  Usage: {% include slide-carousel.html dir="/images/publications/foo-slides" count=14 title="Foo slides" %}
+  Expects files named slide-01.jpg, slide-02.jpg, ... in `dir`.
+{% endcomment -%}
+<style>
+.slide-carousel { position: relative; margin: 1em 0 1.5em; }
+.slide-carousel__track {
+  display: flex; overflow-x: auto; scroll-snap-type: x mandatory; scroll-behavior: smooth;
+  gap: 0; border-radius: 6px; box-shadow: 0 2px 10px rgba(0,0,0,0.15); background: #111;
+  scrollbar-width: thin;
+}
+.slide-carousel__track img {
+  flex: 0 0 100%; width: 100%; height: auto; aspect-ratio: 16 / 9; object-fit: contain;
+  scroll-snap-align: center; display: block;
+}
+.slide-carousel__bar {
+  display: flex; align-items: center; justify-content: center; gap: 14px;
+  margin-top: 8px; font-size: 0.85rem;
+}
+.slide-carousel__bar button {
+  border: 1px solid #c9ced6; background: #fff; color: #2b4c7e; border-radius: 4px;
+  padding: 3px 12px; font-weight: 700; cursor: pointer;
+}
+.slide-carousel__bar button:hover { background: #eef3fb; }
+.slide-carousel__count { min-width: 60px; text-align: center; color: #666; }
+</style>
+<div class="slide-carousel" aria-label="{{ include.title | default: 'Slides' }}">
+  <div class="slide-carousel__track" tabindex="0">
+    {%- for i in (1..include.count) -%}{%- capture num -%}{%- if i < 10 -%}0{%- endif -%}{{ i }}{%- endcapture %}
+    <img src="{{ include.dir }}/slide-{{ num }}.jpg" alt="{{ include.title | default: 'Slide' }} {{ i }}" loading="{% if i == 1 %}eager{% else %}lazy{% endif %}">
+    {%- endfor %}
+  </div>
+  <div class="slide-carousel__bar">
+    <button type="button" data-dir="-1" aria-label="Previous slide">&larr;</button>
+    <span class="slide-carousel__count">1 / {{ include.count }}</span>
+    <button type="button" data-dir="1" aria-label="Next slide">&rarr;</button>
+  </div>
+</div>
+<script>
+(function () {
+  var root = document.currentScript.previousElementSibling;
+  var track = root.querySelector('.slide-carousel__track');
+  var count = root.querySelector('.slide-carousel__count');
+  var n = track.children.length;
+  function idx() { return Math.round(track.scrollLeft / track.clientWidth); }
+  root.querySelectorAll('button').forEach(function (b) {
+    b.addEventListener('click', function () {
+      var i = Math.max(0, Math.min(n - 1, idx() + Number(b.dataset.dir)));
+      track.scrollTo({ left: i * track.clientWidth });
+    });
+  });
+  track.addEventListener('scroll', function () { count.textContent = (idx() + 1) + ' / ' + n; });
+  track.addEventListener('keydown', function (e) {
+    if (e.key === 'ArrowRight' || e.key === 'ArrowLeft') {
+      e.preventDefault();
+      var i = Math.max(0, Math.min(n - 1, idx() + (e.key === 'ArrowRight' ? 1 : -1)));
+      track.scrollTo({ left: i * track.clientWidth });
+    }
+  });
+})();
+</script>

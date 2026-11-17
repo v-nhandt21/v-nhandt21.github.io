@@ -23,6 +23,10 @@ citation: '<b>Tri-Nhan Do</b>, Minh-Khang Le, Hoang-Minh Tran, Thanh-Hau Luong, 
 
 <p style='text-align: justify;'>Few open text-to-speech (TTS) models can render non-verbal vocalizations (NVs) such as laughter, breathing, sniffing and throat clearing, and fewer still support Vietnamese. We describe our system for the VLSP 2026 ViNV-TTS shared task, which requires each tagged NV to be rendered at its intended position while the voice of the target speaker is preserved. Starting from a multilingual masked generative TTS model, we build a human-in-the-loop pipeline in which listener judgments decide all training signal. Human listening turns a small, noisily tagged corpus into clean single-NV examples, selects the best of the model’s own synthesized speech as additional training data, and supplies preference pairs for Direct Preference Optimization, which we adapt to masked token prediction by estimating sequence likelihoods from masked-token log-probabilities. The pipeline teaches the model all four NV classes from a few dozen clean examples of the rarest ones, and on the public test, preference optimization yields the largest improvement in NV placement at a small cost in speaker similarity.</p>
 
+## Slides (Vietnamese)
+
+{% include slide-carousel.html dir="/images/publications/vlsp-2026-vinv-tts-slides" count=14 title="ViNV-TTS slides" %}
+
 ## System Development
 
 Fine-tuned from [k2-fsa/OmniVoice](https://github.com/k2-fsa/OmniVoice), a multilingual masked generative TTS model. Every training example and every preference pair was chosen by human listeners. The table shows the best checkpoint of each stage on the 330-sentence public test. The combined scores are internal proxies computed with the organizers' formula, not the official human-rated scores.
@@ -34,7 +38,13 @@ Fine-tuned from [k2-fsa/OmniVoice](https://github.com/k2-fsa/OmniVoice), a multi
 | exp21 | exp20 data + 399 self-generated clips rated *Good* by 4 blind listeners | 0.742 | 3.0% | 0.748 | 0.804 | 0.764 |
 | **exp22 (submitted)** | DPO on 483 human preference pairs | **0.875** | **2.7%** | 0.678 | **0.853** | **0.838** |
 
-DPO is adapted to the masked generative model by scoring each audio with the log-probabilities of masked tokens (averaged over 4 random maskings), with the LoRA-disabled model as the reference. It gave the largest gain in non-verbal placement (laughter 0.40 → 0.84) at a small cost in speaker similarity. The [interactive experiment map](/files/vlsp-2026-vinv-tts-overview/) (Vietnamese) documents the full data flow, listening rounds, per-tag results and model architecture.
+DPO is adapted to the masked generative model by scoring each audio with the log-probabilities of masked tokens (averaged over 4 random maskings), with the LoRA-disabled model as the reference. It gave the largest gain in non-verbal placement (laughter 0.40 → 0.84) at a small cost in speaker similarity.
+
+## Interactive Experiment Map
+
+<p>The full experiment notebook (in Vietnamese): data flow per tag, listening rounds, per-checkpoint results, model architecture and the NVPA probe, with playable samples. <a href="/files/vlsp-2026-vinv-tts-overview/" target="_blank">Open full screen &#8599;</a></p>
+
+<iframe src="/files/vlsp-2026-vinv-tts-overview/" title="ViNV-TTS interactive experiment map" loading="lazy" style="width: 100%; height: 900px; border: 1px solid #2a2052; border-radius: 6px; background: #07060f;"></iframe>
 
 ## Audio Samples
 
