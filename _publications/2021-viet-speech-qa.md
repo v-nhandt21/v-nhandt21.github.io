@@ -7,9 +7,13 @@ date: 2022-01-01
 venue: 'Intelligent User Interfaces Conference'
 paperurl: ''
 citation: 'Tin Duy Vo, Manh Tien Luong, Duong Minh Le, Hieu Minh Tran, <b>Nhan Tri Do</b>, Tuan-Duy Hien Nguyen, Hung Hai Bui, Dat Quoc Nguyen, Dinh Quoc Phung'
+links:
+  - label: Paper
+    icon: fas fa-file-alt
+    url: https://dl.acm.org/doi/abs/10.1145/3490100.3516525
 ---
 
-[Download Paper](https://dl.acm.org/doi/abs/10.1145/3490100.3516525)
+{% include pub-links.html %}
 
 <video width="100%" height="auto" controls>
   <source src="/images/publications/car-manual-demo.mp4" type="video/mp4">

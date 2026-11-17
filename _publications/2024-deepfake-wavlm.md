@@ -7,7 +7,15 @@ date: 2024-01-01
 venue: 'Paper'
 paperurl: ''
 citation: '<b>Nhan Tri Do</b>, Loi Nguyen Hoang, Phuong Ta Viet, Kien Phan Trung'
+links:
+  - label: Paper
+    icon: fas fa-file-pdf
+    url: /files/enhancing-deepfake-detection-a-study-using-wavlm-and-advanced-rawboost-augmentation-techniques.pdf
+  - label: Slides
+    icon: fas fa-chalkboard-teacher
+    url: /files/rivf-slide.pdf
 ---
+{% include pub-links.html %}
 
 <iframe src="/files/enhancing-deepfake-detection-a-study-using-wavlm-and-advanced-rawboost-augmentation-techniques.pdf" width="100%" height="4000"></iframe>
 

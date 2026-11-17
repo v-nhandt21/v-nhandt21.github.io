@@ -8,11 +8,47 @@ author_profile: true
 {% include base_path %}
 {% assign author = site.author %}
 
-{% if author.googlescholar %}
-  <p>You can also find my articles on <a href="{{ author.googlescholar }}" target="_blank"><u>my Google Scholar profile</u></a>.</p>
-{% endif %}
+{%- assign pubs = site.publications | where_exp: "p", "p.title" -%}
+{%- assign years = "" | split: "" -%}
+{%- assign n_awards = 0 -%}
+{%- for p in pubs reversed -%}
+  {%- assign y = p.date | date: "%Y" -%}
+  {%- unless years contains y -%}{%- assign years = years | push: y -%}{%- endunless -%}
+  {%- if p.status contains "Place" -%}{%- assign n_awards = n_awards | plus: 1 -%}{%- endif -%}
+{%- endfor -%}
+
+<div class="pub-toolbar">
+  <p class="pub-toolbar__summary"><strong>{{ pubs | size }}</strong> publications{% if author.googlescholar %} · <a href="{{ author.googlescholar }}" target="_blank" rel="noopener">Google Scholar <i class="fas fa-external-link-alt" aria-hidden="true"></i></a>{% endif %}</p>
+  <div class="pub-filters" role="group" aria-label="Filter publications">
+    <button type="button" class="pub-filter" data-filter="all" aria-pressed="true">All</button>
+    {%- if n_awards > 0 %}<button type="button" class="pub-filter pub-filter--award" data-filter="award" aria-pressed="false">🏆 Awards</button>{% endif %}
+    {%- for y in years %}
+    <button type="button" class="pub-filter" data-filter="{{ y }}" aria-pressed="false">{{ y }}</button>
+    {%- endfor %}
+  </div>
+</div>
 
 <style>
+.pub-toolbar { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 10px 20px; margin: 0 0 6px; }
+.pub-toolbar__summary { margin: 0; font-size: 0.9rem; color: #5b6472; }
+.pub-toolbar__summary a { color: #2b4c7e; font-weight: 600; text-decoration: none; }
+.pub-toolbar__summary a i { font-size: 0.7em; }
+.pub-filters { display: flex; flex-wrap: wrap; gap: 6px; }
+.pub-filter {
+  border: 1px solid #d5dbe5; background: #fff; color: #4b5563; border-radius: 999px;
+  padding: 4px 13px; font-size: 0.8rem; font-weight: 600; cursor: pointer; transition: all .15s;
+}
+.pub-filter:hover { border-color: #2b4c7e; color: #2b4c7e; }
+.pub-filter[aria-pressed="true"] { background: #2b4c7e; border-color: #2b4c7e; color: #fff; }
+.pub-filter--award[aria-pressed="true"] { background: #b7791f; border-color: #b7791f; }
+.pub-card[hidden] { display: none !important; }
+.pub-empty { display: none; color: #6b7280; font-size: 0.9rem; }
+html[data-theme="dark"] .pub-toolbar__summary { color: #9aa3b2; }
+html[data-theme="dark"] .pub-toolbar__summary a { color: #9cc4ee; }
+html[data-theme="dark"] .pub-filter { background: #1c1f27; border-color: #343a46; color: #b6bdca; }
+html[data-theme="dark"] .pub-filter[aria-pressed="true"] { background: #9cc4ee; border-color: #9cc4ee; color: #14161c; }
+html[data-theme="dark"] .pub-filter--award[aria-pressed="true"] { background: #f2c46d; border-color: #f2c46d; }
+
 .pub-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -139,7 +175,7 @@ author_profile: true
 <div class="pub-grid reveal">
   {% for post in site.publications reversed %}
     {% if post.title %}
-      <a class="pub-card lift-hover" href="{{ base_path }}{{ post.url }}">
+      <a class="pub-card lift-hover" href="{{ base_path }}{{ post.url }}" data-year="{{ post.date | date: '%Y' }}"{% if post.status contains 'Place' %} data-award="1"{% endif %}>
         <div class="pub-card-meta">
           {% if post.date %}<span class="pub-card-year">{{ post.date | date: "%Y" }}</span>{% endif %}
           {% if post.venue %}<span class="pub-card-venue">{{ post.venue }}</span>{% endif %}
@@ -153,3 +189,19 @@ author_profile: true
     {% endif %}
   {% endfor %}
 </div>
+
+<script>
+(function () {
+  var buttons = document.querySelectorAll(".pub-filter");
+  var cards = document.querySelectorAll(".pub-card");
+  buttons.forEach(function (btn) {
+    btn.addEventListener("click", function () {
+      var f = btn.dataset.filter;
+      buttons.forEach(function (b) { b.setAttribute("aria-pressed", b === btn ? "true" : "false"); });
+      cards.forEach(function (c) {
+        c.hidden = !(f === "all" || (f === "award" ? c.dataset.award === "1" : c.dataset.year === f));
+      });
+    });
+  });
+})();
+</script>

@@ -127,10 +127,19 @@ html[data-theme="dark"] {
 
   /* Footer */
   .page__footer {
-    background-color: #191c24;
-    border-top-color: #2a2e38;
+    background-color: transparent;
     color: #8a919e;
+
+    footer { border-top-color: #2a2e38; }
   }
+
+  .site-footer__name { color: #f1f3f6 !important; }
+  .site-footer__bio { color: #9aa3b2; }
+  .site-footer__nav a { color: #b6bdca !important; }
+  .site-footer__nav a:hover { color: #9cc4ee !important; }
+  .site-footer__social a { border-color: #343a46; color: #b6bdca !important; }
+  .site-footer__social a:hover { background: #9cc4ee; border-color: #9cc4ee; color: #14161c !important; }
+  .site-footer__bottom { border-top-color: #252a33; color: #7d8594; }
 
   /* Enhancement utilities */
   .lift-hover:hover,
@@ -218,10 +227,17 @@ html[data-theme="dark"] {
     border-color: #a7d1ff;
   }
 
-  .resume-img,
-  .cert-gallery img {
-    box-shadow: 0 2px 14px rgba(0, 0, 0, 0.55);
-  }
+  .resume-preview img { border-color: #2c313c; box-shadow: 0 2px 14px rgba(0, 0, 0, 0.55); }
+  .resume-preview__info { background: #1c1f27; border-color: #2c313c; }
+  .resume-preview__info h3 { color: #f1f3f6; }
+  .resume-preview__info p { color: #9aa3b2; }
+  .resume-preview__info a { background: #232733; border-color: #343a46; color: #9cc4ee !important; }
+  .resume-preview__info a.is-primary { background: #9cc4ee; border-color: #9cc4ee; color: #14161c !important; }
+  .cert-card { background: #1c1f27; border-color: #2c313c; }
+  .cert-card img { background: #232733; }
+  .cert-card figcaption { color: #9aa3b2; border-top-color: #2c313c; }
+  .cert-card figcaption strong { color: #f1f3f6; }
+  .cert-card figcaption .year { color: #9cc4ee; }
 
   /* ── CV page ── */
   .cv-entry-company,

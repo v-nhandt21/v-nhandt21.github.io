@@ -10,7 +10,10 @@ html {
 body {
   margin: 0;
   padding: 0;
-  padding-bottom: 9em;
+  /* flex column keeps the footer after the content and at the bottom of short pages */
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
   color: $text-color;
   font-family: $global-font-family;
   line-height: 1.5;

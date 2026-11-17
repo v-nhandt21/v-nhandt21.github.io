@@ -265,3 +265,100 @@ a.btn-gradient:hover,
 
 html[data-theme="dark"] .theme-toggle .icon-sun { display: none; }
 html[data-theme="dark"] .theme-toggle .icon-moon { display: inline-block; }
+
+/* ── Lightbox (enhancements.js → initLightbox) ─────────────────────────── */
+img.lightbox-target { cursor: zoom-in; }
+img.lightbox-target:focus-visible { outline: 3px solid #4a9eda; outline-offset: 3px; }
+html.lightbox-open, html.lightbox-open body { overflow: hidden; }
+
+.lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 3vh 4vw;
+  background: rgba(10, 12, 18, 0.88);
+  backdrop-filter: blur(3px);
+}
+.lightbox.is-open { display: flex; animation: lightbox-in 0.18s ease both; }
+@keyframes lightbox-in { from { opacity: 0; } to { opacity: 1; } }
+
+.lightbox__figure {
+  margin: 0;
+  max-width: 100%;
+  max-height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+.lightbox__figure img {
+  max-width: 92vw;
+  max-height: 84vh;
+  object-fit: contain;
+  border-radius: 6px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+  background: #fff;
+}
+.lightbox .lightbox__figure figcaption {
+  margin: 0;
+  font-family: inherit;
+  color: #e5e8ee;
+  font-size: 0.88rem;
+  text-align: center;
+  max-width: 70ch;
+}
+.lightbox__close,
+.lightbox__nav {
+  position: absolute;
+  border: 0;
+  background: rgba(255, 255, 255, 0.12);
+  color: #fff;
+  cursor: pointer;
+  border-radius: 50%;
+  width: 44px;
+  height: 44px;
+  font-size: 1.7rem;
+  line-height: 44px;
+  padding: 0;
+  transition: background 0.15s;
+}
+.lightbox__close:hover,
+.lightbox__nav:hover { background: rgba(255, 255, 255, 0.25); }
+.lightbox__close { top: 16px; right: 16px; }
+.lightbox__prev { left: 16px; top: 50%; margin-top: -22px; }
+.lightbox__next { right: 16px; top: 50%; margin-top: -22px; }
+.lightbox--single .lightbox__nav { display: none; }
+
+/* ── Mobile menu button: match the round theme toggle ───────────────────── */
+#site-nav.greedy-nav > button {
+  top: 50%;
+  height: 34px;
+  width: 34px;
+  padding: 0;
+  margin-top: -17px;
+  border: 1px solid rgba(122, 130, 136, 0.35);
+  border-radius: 50%;
+  background: transparent;
+  color: #4b5563;
+  transition: background 0.15s, border-color 0.15s;
+
+  &:hover { background: rgba(43, 76, 126, 0.08); border-color: rgba(43, 76, 126, 0.5); }
+
+  .navicon,
+  .navicon:before,
+  .navicon:after {
+    width: 16px;
+    height: 2px;
+    border-radius: 1px;
+    background: currentColor;
+  }
+  .navicon:before { top: -5px; }
+  .navicon:after { bottom: -5px; }
+}
+#site-nav.greedy-nav > button.close .navicon { background: transparent; }
+#site-nav.greedy-nav > button.close .navicon:before,
+#site-nav.greedy-nav > button.close .navicon:after { top: 0; bottom: auto; }
+html[data-theme="dark"] #site-nav.greedy-nav > button { color: #c7cdd6; border-color: rgba(215, 219, 226, 0.25); }

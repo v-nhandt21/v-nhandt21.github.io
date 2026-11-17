@@ -3,6 +3,17 @@ permalink: /about/
 title: "About Me"
 excerpt: "About me"
 author_profile: true
+wide: true
+links:
+  - label: Download CV
+    icon: fas fa-download
+    url: /latex/CV_short.pdf
+  - label: Full CV
+    icon: fas fa-file-alt
+    url: /latex/CV_long.pdf
+  - label: CV online
+    icon: fas fa-user
+    url: /cv/
 redirect_from:
   - /about
   - /about.html
@@ -10,7 +21,7 @@ redirect_from:
 
 I am **Do Tri Nhan**, an AI Engineer specializing in **Speech and Signal Processing**, currently working as **Senior AI Engineer, Conversational Speech Technology** at [Vinfast Automotive AI Development Institute - Vingroup JSC](https://vinfast.com), Ho Chi Minh City, Vietnam.
 
-<a href="/latex/CV_short.pdf" class="btn btn--info" target="_blank">Download CV (Short)</a>
+{% include pub-links.html %}
 
 ## Research Interests
 

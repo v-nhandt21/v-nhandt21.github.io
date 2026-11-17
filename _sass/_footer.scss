@@ -1,35 +1,26 @@
 /* ==========================================================================
    FOOTER
+   The page is a flex column (see _base.scss) so the footer follows the content
+   and still sits at the bottom of short pages; no fixed padding reservation.
    ========================================================================== */
 
 .page__footer {
-  @include clearfix;
-  float: left;
-  margin-left: 0;
-  margin-right: 0;
-  width: 100%;
   clear: both;
-  /* sticky footer fix start */
-  position: absolute;
-  bottom: 0em;
-  height: auto;
-  /* sticky footer fix end */
-  margin-top: 3em;
-  color: mix(#fff, $gray, 25%);
+  width: 100%;
+  margin-top: auto;
+  padding-top: 3em;
+  color: #6b7280;
+  background-color: transparent;
   -webkit-animation: intro 0.3s both;
           animation: intro 0.3s both;
   -webkit-animation-delay: 0.45s;
           animation-delay: 0.45s;
-  background-color: $lighter-gray;
-  border-top: 1px solid $light-gray;
 
   footer {
-    @include clearfix;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 2em;
+    margin: 0 auto;
     max-width: 100%;
-    padding: 0 1em 2em;
+    padding: 0 1em;
+    border-top: 1px solid #e3e7ee;
 
     @include breakpoint($x-large) {
       max-width: $x-large;
@@ -39,54 +30,90 @@
   a {
     color: inherit;
     text-decoration: none;
-
-    &:hover {
-      text-decoration: underline;
-    }
-  }
-
-  .fas,
-  .fab,
-  .far,
-  .fal {
-    color: mix(#fff, $gray, 25%);
   }
 }
 
-.page__footer-copyright {
-  font-family: $global-font-family;
-  font-size: $type-size-7;
+.site-footer {
+  display: grid;
+  grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 1.5em 2.5em;
+  padding: 1.8em 0 1.2em;
+
+  @media (max-width: 760px) {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 1.1em;
+  }
 }
 
-.page__footer-follow {
-  ul {
-    margin: 0;
-    padding: 0;
-    list-style-type: none;
-  }
+.site-footer__name {
+  font-size: 1.05rem;
+  font-weight: 800;
+  letter-spacing: 0.01em;
+  color: #1f2430 !important;
+}
 
-  li {
-    display: inline-block;
-    padding-top: 5px;
-    padding-bottom: 5px;
-    font-family: $sans-serif-narrow;
-    font-size: $type-size-6;
-    text-transform: uppercase;
-  }
+.site-footer__bio {
+  margin: 0.25em 0 0;
+  font-size: 0.82rem;
+  color: #6b7280;
+}
 
-  li + li:before {
-    content: "";
-    padding-right: 5px;
-  }
+.site-footer__nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35em 1.3em;
+  font-size: 0.86rem;
+  font-weight: 600;
 
   a {
-    padding-right: 10px;
-    font-weight: bold;
-  }
+    color: #4b5563 !important;
+    transition: color 0.15s;
 
-  .social-icons {
-    a {
-      white-space: nowrap;
+    &:hover { color: #2b4c7e !important; }
+  }
+}
+
+.site-footer__social {
+  display: flex;
+  gap: 8px;
+
+  a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    border: 1px solid #dfe4ec;
+    color: #4b5563 !important;
+    font-size: 0.95rem;
+    transition: background 0.15s, color 0.15s, border-color 0.15s, transform 0.15s;
+
+    &:hover {
+      background: #2b4c7e;
+      border-color: #2b4c7e;
+      color: #fff !important;
+      transform: translateY(-1px);
     }
+  }
+}
+
+.site-footer__bottom {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 0.4em 1.5em;
+  padding: 1em 0 1.6em;
+  border-top: 1px solid #eef1f5;
+  font-size: 0.76rem;
+  color: #8a93a3;
+
+  a {
+    text-decoration: underline !important;
+    text-decoration-color: rgba(138, 147, 163, 0.4) !important;
+    text-underline-offset: 2px;
+
+    &:hover { color: #2b4c7e; }
   }
 }

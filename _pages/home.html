@@ -160,29 +160,86 @@ author_profile: true
 }
 
 /* ── Resume images ── */
-.resume-img {
-  max-width: 100%;
-  height: auto;
-  display: block;
-  margin: 0 auto 12px;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.12);
-  border-radius: 4px;
+/* ── Resume preview ── */
+.resume-preview {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(200px, 0.8fr);
+  gap: 16px;
+  align-items: stretch;
+  margin-bottom: 8px;
+}
+.resume-preview img {
+  width: 100%;
+  height: 100%;
+  max-height: 360px;
+  object-fit: cover;
+  object-position: top;
+  border-radius: 6px;
+  border: 1px solid #e3e7ee;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+  background: #fff;
+  transition: transform .18s ease, box-shadow .18s ease;
+}
+.resume-preview img:hover { transform: translateY(-3px); box-shadow: 0 10px 24px rgba(20,30,50,0.14); }
+.resume-preview__info {
+  display: flex; flex-direction: column; justify-content: center; gap: 10px;
+  padding: 18px; border-radius: 8px; background: #f6f8fb; border: 1px solid #e6eaf0;
+}
+.resume-preview__info h3 { margin: 0; font-size: 1rem; color: #1a1a2e; }
+.resume-preview__info p { margin: 0 0 4px; font-size: 0.82rem; color: #6b7280; line-height: 1.5; }
+.resume-preview__info a {
+  display: flex; align-items: center; gap: 8px; padding: 8px 12px; border-radius: 6px;
+  font-size: 0.84rem; font-weight: 600; text-decoration: none !important;
+  border: 1px solid #d5dbe5; color: #2b4c7e !important; background: #fff; transition: all .15s;
+}
+.resume-preview__info a:hover { border-color: #2b4c7e; }
+.resume-preview__info a.is-primary { background: #2b4c7e; border-color: #2b4c7e; color: #fff !important; }
+.resume-preview__info a.is-primary:hover { background: #1f3a63; }
+@media (max-width: 720px) {
+  .resume-preview { grid-template-columns: 1fr 1fr; }
+  .resume-preview__info { grid-column: 1 / -1; }
+  .resume-preview img { max-height: 260px; }
 }
 
-/* ── Cert gallery ── */
+/* ── Certifications ── */
 .cert-gallery {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 12px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
   margin-bottom: 16px;
 }
-.cert-gallery img {
-  width: 100%;
-  height: auto;
-  border-radius: 5px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-  object-fit: cover;
+.cert-card {
+  display: block;
+  margin: 0;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid #e6eaf0;
+  background: #fff;
+  transition: transform .18s ease, box-shadow .18s ease;
 }
+.cert-card:hover { transform: translateY(-3px); box-shadow: 0 10px 24px rgba(20,30,50,0.12); }
+.cert-card img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: contain;
+  background: #fff;
+}
+.cert-card figcaption {
+  margin: 0;
+  width: auto;
+  font-family: inherit;
+  padding: 10px 14px 12px;
+  font-size: 0.82rem;
+  line-height: 1.45;
+  color: #4b5563;
+  border-top: 1px solid #eef1f5;
+}
+.cert-card figcaption strong { display: block; color: #1a1a2e; font-size: 0.86rem; }
+.cert-card figcaption .year { float: right; font-weight: 700; color: #2b4c7e; margin-left: 8px; }
+.cert-card--wide { grid-column: 1 / -1; }
+.cert-card--wide img { aspect-ratio: 21 / 9; background: #e9ecf1; }
+@media (max-width: 600px) { .cert-gallery { grid-template-columns: 1fr; } .cert-card--wide img { aspect-ratio: 16 / 9; } }
 
 /* ── View more link ── */
 .view-more {
@@ -322,19 +379,47 @@ author_profile: true
 
 <!-- ══ RESUME ══ -->
 <h2 class="section-title reveal">Resume</h2>
-<img class="resume-img zoom-hover reveal" src="/images/resume/concise-1.png?v={{ site.time | date: '%s' }}" alt="Do Tri Nhan Resume Page 1">
-<img class="resume-img zoom-hover reveal" src="/images/resume/concise-2.png?v={{ site.time | date: '%s' }}" alt="Do Tri Nhan Resume Page 2">
+<div class="resume-preview reveal">
+  <img src="/images/resume/concise-1.png?v={{ site.time | date: '%s' }}" alt="Resume, page 1" loading="lazy">
+  <img src="/images/resume/concise-2.png?v={{ site.time | date: '%s' }}" alt="Resume, page 2" loading="lazy">
+  <div class="resume-preview__info">
+    <h3>Curriculum Vitae</h3>
+    <p>Two-page résumé, updated {{ site.time | date: "%B %Y" }}. Click a page to enlarge.</p>
+    <a class="is-primary" href="/latex/CV_short.pdf" target="_blank" rel="noopener"><i class="fas fa-download" aria-hidden="true"></i>Download CV (PDF)</a>
+    <a href="/latex/CV_long.pdf" target="_blank" rel="noopener"><i class="fas fa-file-alt" aria-hidden="true"></i>Full CV (PDF)</a>
+    <a href="/cv/"><i class="fas fa-user" aria-hidden="true"></i>View online</a>
+  </div>
+</div>
 
 <!-- ══ CERTIFICATIONS ══ -->
-<h2 class="section-title reveal" style="margin-top:28px; font-size:1.25rem;">Certifications</h2>
+<h2 class="section-title reveal" style="margin-top:32px;">Certifications &amp; Awards</h2>
 <div class="cert-gallery reveal">
-  <img class="zoom-hover" src="/images/certificates/certificate-1.png" alt="Certificate">
-  <img class="zoom-hover" src="/images/certificates/certificate-2.png" alt="Certificate 1">
-  <img class="zoom-hover" src="/images/certificates/certificate-3.png" alt="Certificate 2">
-  <img class="zoom-hover" src="/images/certificates/certificate-4.png" alt="Certificate 3">
-  <img class="zoom-hover" src="/images/certificates/certificate-5.png" alt="Certificate 4">
-</div>
-<div class="cert-gallery reveal">
-  <a href="/publication/2026-vlsp-vinv-tts"><img class="zoom-hover" src="/images/certificates/vlsp-2026-certificates.jpg" alt="VLSP 2026 First Rank certificates: Vietnamese Non-Verbal TTS Track A and Track B, Speech Quality Assessment"></a>
-  <a href="/publications/"><img class="zoom-hover" src="/images/certificates/apsipa-2026-certificates.jpg" alt="APSIPA ASC 2026 certificates of presentation: ViInstruct, ViNonverbal, Vi-SparkRL"></a>
+  <figure class="cert-card cert-card--wide">
+    <img src="/images/certificates/vlsp-2026-certificates.jpg" alt="VLSP 2026: First Rank in Vietnamese Non-Verbal TTS (Track A and Track B) and Speech Quality Assessment" loading="lazy">
+    <figcaption><span class="year">2026</span><strong>VLSP 2026 · First Rank ×3</strong>Non-Verbal TTS (Track A &amp; B) and Speech Quality Assessment</figcaption>
+  </figure>
+  <figure class="cert-card">
+    <img src="/images/certificates/apsipa-2026-certificates.jpg" alt="APSIPA ASC 2026: certificates of presentation for ViInstruct, ViNonverbal and Vi-SparkRL" loading="lazy">
+    <figcaption><span class="year">2026</span><strong>APSIPA ASC 2026 · Presentation ×3</strong>ViInstruct, ViNonverbal and Vi-SparkRL</figcaption>
+  </figure>
+  <figure class="cert-card">
+    <img src="/images/certificates/certificate-2.png" alt="VLSP 2022: First Rank in two text-to-speech shared tasks" loading="lazy">
+    <figcaption><span class="year">2022</span><strong>VLSP 2022 · First Rank ×2</strong>Text-to-speech shared tasks</figcaption>
+  </figure>
+  <figure class="cert-card">
+    <img src="/images/certificates/certificate-4.png" alt="IEEE SLT 2022 Hackathon participation certificate and FPT Code War scholarship" loading="lazy">
+    <figcaption><span class="year">2022</span><strong>IEEE SLT Hackathon · FPT Code War</strong>Hackathon participation and scholarship</figcaption>
+  </figure>
+  <figure class="cert-card">
+    <img src="/images/certificates/certificate-1.png" alt="Excellent Thesis award (2021) and Science-A-Thon First Prize (2022)" loading="lazy">
+    <figcaption><span class="year">2021–22</span><strong>Excellent Thesis · Science-A-Thon First Prize</strong>HCMUS student research award and Vietnam Summer School of Science</figcaption>
+  </figure>
+  <figure class="cert-card">
+    <img src="/images/certificates/certificate-5.png" alt="Vietnam Summer School of Science award (2022) and HCMC certificate of merit (2021)" loading="lazy">
+    <figcaption><span class="year">2021–22</span><strong>School Award · HCMC Certificate of Merit</strong>Vietnam Summer School of Science; outstanding student in IT &amp; AI</figcaption>
+  </figure>
+  <figure class="cert-card">
+    <img src="/images/certificates/certificate-3.png" alt="HCMC certificate of merit (framed) and KMS Hackathon Runner-up" loading="lazy">
+    <figcaption><span class="year">2020–21</span><strong>HCMC Certificate of Merit · KMS Runner-up</strong>Outstanding student in IT &amp; AI; KMS Hackathon</figcaption>
+  </figure>
 </div>

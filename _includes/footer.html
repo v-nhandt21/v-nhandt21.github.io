@@ -1,24 +1,28 @@
 {% include base_path %}
+{%- assign a = site.author -%}
+<div class="site-footer">
+  <div class="site-footer__brand">
+    <a class="site-footer__name" href="{{ base_path }}/">{{ a.name | default: site.title }}</a>
+    <p class="site-footer__bio">{{ a.bio }}{% if a.location %} · {{ a.location }}{% endif %}</p>
+  </div>
 
-<div class="page__footer-follow">
-  <ul class="social-icons">
-    {% if site.data.ui-text[site.locale].follow_label %}
-      <li><strong>{{ site.data.ui-text[site.locale].follow_label }}</strong></li>
-    {% endif %}
-    {% if site.twitter.username %}
-      <li><a href="https://twitter.com/{{ site.twitter.username }}"><i class="fab fa-twitter-square" aria-hidden="true"></i> Twitter</a></li>
-    {% endif %}
-    {% if site.facebook.username %}
-      <li><a href="https://facebook.com/{{ site.facebook.username }}"><i class="fab fa-facebook-square" aria-hidden="true"></i> Facebook</a></li>
-    {% endif %}
-    {% if site.author.github %}
-      <li><a href="http://github.com/{{ site.author.github }}"><i class="fab fa-github" aria-hidden="true"></i> GitHub</a></li>
-    {% endif %}
-    {% if site.author.bitbucket %}
-      <li><a href="http://bitbucket.org/{{ site.author.bitbucket }}"><i class="fab fa-bitbucket" aria-hidden="true"></i> Bitbucket</a></li>
-    {% endif %}
-    <li><a href="{% if site.atom_feed.path %}{{ site.atom_feed.path }}{% else %}{{ base_path }}/feed.xml{% endif %}"><i class="fa fa-fw fa-rss-square" aria-hidden="true"></i> {{ site.data.ui-text[site.locale].feed_label | default: "Feed" }}</a></li>
-  </ul>
+  <nav class="site-footer__nav" aria-label="Footer">
+    <a href="{{ base_path }}/">Home</a>
+    {%- for link in site.data.navigation.main %}
+    <a href="{% unless link.url contains 'http' %}{{ base_path }}{% endunless %}{{ link.url }}">{{ link.title }}</a>
+    {%- endfor %}
+  </nav>
+
+  <div class="site-footer__social">
+    {%- if a.email %}<a href="mailto:{{ a.email }}" aria-label="Email" title="Email"><i class="fas fa-envelope" aria-hidden="true"></i></a>{% endif %}
+    {%- if a.googlescholar %}<a href="{{ a.googlescholar }}" aria-label="Google Scholar" title="Google Scholar"><i class="fas fa-graduation-cap" aria-hidden="true"></i></a>{% endif %}
+    {%- if a.github %}<a href="https://github.com/{{ a.github }}" aria-label="GitHub" title="GitHub"><i class="fab fa-github" aria-hidden="true"></i></a>{% endif %}
+    {%- if a.linkedin %}<a href="https://www.linkedin.com/in/{{ a.linkedin }}" aria-label="LinkedIn" title="LinkedIn"><i class="fab fa-linkedin-in" aria-hidden="true"></i></a>{% endif %}
+    <a href="{% if site.atom_feed.path %}{{ site.atom_feed.path }}{% else %}{{ base_path }}/feed.xml{% endif %}" aria-label="RSS feed" title="RSS feed"><i class="fas fa-rss" aria-hidden="true"></i></a>
+  </div>
 </div>
 
-<div class="page__footer-copyright">&copy; {{ site.time | date: '%Y' }} {{ site.name | default: site.title }}. {{ site.data.ui-text[site.locale].powered_by | default: "Powered by" }} <a href="http://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://github.com/academicpages/academicpages.github.io">AcademicPages</a>, a fork of <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+<div class="site-footer__bottom">
+  <span>&copy; {{ site.time | date: '%Y' }} {{ a.name | default: site.title }}</span>
+  <span>Built with <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://github.com/academicpages/academicpages.github.io" rel="nofollow">AcademicPages</a></span>
+</div>
